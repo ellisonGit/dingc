@@ -1,3 +1,4 @@
+/*
 package com.hnjca.wechat.service.impl;
 
 import com.hnjca.wechat.dao.TestDao;
@@ -9,14 +10,18 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.Map;
 
+*/
 /**
  * Description:
  * User: YangYong
  * Date: 2019-04-19
  * Time: 15:14
  * Modified:
- */
-@Service
+ *//*
+
+@Service*/
+/**//*
+
 public class TestServiceImpl implements TestService {
 
     @Autowired
@@ -42,3 +47,4 @@ public class TestServiceImpl implements TestService {
         return testDao.selectMaxId();
     }
 }
+*/

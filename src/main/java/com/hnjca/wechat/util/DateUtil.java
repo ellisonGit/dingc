@@ -6,7 +6,7 @@ import java.util.Date;
 
 /**
  * Description:
- * User: YangYong
+ * User: Ellison
  * Date: 2019-04-08
  * Time: 14:18
  * Modified:
@@ -83,6 +83,26 @@ public class DateUtil {
             return false;
         }
     }
+
+    /**
+     * 当前日期加上天数后的日期
+     * @param num 为增加的天数
+     * @return
+     */
+    public static String plusDay(int num){
+        Date d = new Date();
+        SimpleDateFormat format = new SimpleDateFormat("yyyyMMdd");
+        String currdate = format.format(d);
+      /*  System.out.println("现在的日期是：" + currdate);
+*/
+        Calendar ca = Calendar.getInstance();
+        ca.add(Calendar.DATE, num);// num为增加的天数，可以改变的
+        d = ca.getTime();
+        String enddate = format.format(d);
+      /*  System.out.println("增加天数以后的日期：" + enddate);*/
+        return enddate;
+    }
+
 
     public static void main(String[] args) {
         System.out.println(getMonthStr());

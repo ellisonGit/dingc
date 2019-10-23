@@ -1,6 +1,7 @@
 package com.hnjca.wechat.wxUtil;
 import com.hnjca.wechat.util.MyConfig;
-import org.apache.catalina.servlet4preview.http.HttpServletRequest;
+
+import javax.servlet.http.HttpServletRequest;
 import java.io.*;
 import java.net.ConnectException;
 import java.net.HttpURLConnection;

@@ -49,7 +49,7 @@ public class TemplateMsgUtil {
                         templateJson.getDataRemarkValue());
 
         String postResult = MyRequestUtil.sendPost(url,param);
-
+        System.out.println("msg erro:"+postResult);
         TemplateMsgResult templateMsgResult = (TemplateMsgResult) GsonUtil.jsonToObject(postResult, TemplateMsgResult.class);
         if(templateMsgResult.getErrcode() != null && templateMsgResult.getErrcode().equals("0")){
             return true;

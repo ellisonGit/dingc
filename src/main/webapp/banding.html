@@ -82,36 +82,42 @@ html , body{
 <script src="js/common.js"></script>
 
 <script>
-
+	/*var icardUrl = "http://food.gdeastriver.com/api";*/
 	document.getElementById("gonghao").focus();
 	
-	var openId = getOpenIdFromCookie(); 	
+	var  openid = getOpenIdFromCookie();//获取openid
+	if(openid==""){
+		window.location.href=icardUrl+"/hnjca/auth?returnUrl="+icardUrl+"/banding.html";
+	}
 	//openId = "123";
 	
 	/*init();*/
-	validateBind();
+
 	
 	//验证是否已经绑定过
 	function validateBind(){
-		var url = "/api/forward/validateBanding";
+		if(openid==""){
+			window.location.href=icardUrl+"/hnjca/auth?returnUrl="+icardUrl+"/banding.html";
+		}
+		var url = "/api/wx/validateBind";
 		$.ajax({
 			url: url,
 			data:{
-				openId:openId
+				openid:openid
 			},
 			type:'GET',
 			success:function(data){				
-				var result = JSON.parse(data.data);				
-				if(result.code=="000002"){
+
+				if(data.rcode=="1"){
 					$.toptip('已绑定，即将跳转到详情页', 'success');
 					setTimeout(function(){
-						window.location.href="info_1.html";
+						window.location.href="dingcindex.html";
 					},700);
 				}
+
 			}
 		});
 	}
-
 
 	//绑定
 	function banding(){
@@ -128,24 +134,24 @@ html , body{
 			document.getElementById("xingming").focus();
 			return;
 		}
-		var url = "/api/forward/banding";
+		var url = "/api/wx/banding";
 		$.ajax({
 			url: url,
 			data:{
-				openid:openId,
-				stuno:empcode,
-				stuname:empname
+				openid:openid,
+				empno:empcode,
+				empname:empname
 			},
-			type:'GET',
+			type:'POST',
 			success:function(data){				
-				var result = JSON.parse(data.data);	
-				if(result.code=="000002"){
+
+				if(data.rcode=="1"){
 					$.toptip('绑定成功，即将跳转到详情页', 'success');
 					setTimeout(function(){
-						window.location.href="info_1.html";
+						window.location.href="dingcindex.html";
 					},700);
 				}else{
-					$.toptip(result.desc, 'warning');
+					$.toptip(data.desc, 'warning');
 					return;
 				}
 			}

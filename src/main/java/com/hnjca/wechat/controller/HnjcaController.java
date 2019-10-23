@@ -220,9 +220,9 @@ public class HnjcaController {
     public static void main(String[] args) {
 
         String responeJsonStr = "{\"button\" : [" +
-                    "{\"name\":\"关于本公司\",\"sub_button\":[{\"type\":\"view\",\"name\":\"联系我们\",\"url\":\"http://www.hnjca.cn/Home/List/58/1\"},{\"type\":\"view\",\"name\":\"项目案例\",\"url\":\"http://www.hnjca.cn/Home/List/3/1\"},{\"type\":\"view\",\"name\":\"产品中心\",\"url\":\"http://www.hnjca.cn/Home/List/1/1\"},{\"type\":\"view\",\"name\":\"公司简介\",\"url\":\"http://www.hnjca.cn/Home/List/53/1\"}]}," +
-                "{\"name\":\"微平台\",\"sub_button\":[{\"type\":\"view\",\"name\":\"订餐服务\",\"url\":\"http://lllison.viphk.ngrok.org/api/dingcan.html\"},{\"type\":\"view\",\"name\":\"微信充值\",\"url\":\"http://lllison.viphk.ngrok.org/api/wxPay.html\"},{\"type\":\"view\",\"name\":\"一卡通矩阵\",\"url\":\"http://lllison.viphk.ngrok.org/api/info_1.html?t=2\"},{\"type\":\"view\",\"name\":\"账户信息\",\"url\":\"http://lllison.viphk.ngrok.org/api/info_1.html\"}]}," +
-                "{\"name\":\"使用帮助\",\"sub_button\":[{\"type\":\"click\",\"name\":\"操作说明\",\"key\":\"click_key1\"},{\"type\":\"view\",\"name\":\"账户认证\",\"url\":\"http://lllison.viphk.ngrok.org/api/banding.html\"}]}" +
+                    "{\"name\":\"我的一卡通\",\"sub_button\":[{\"type\":\"view\",\"name\":\"一卡通订餐\",\"url\":\"http://food.gdeastriver.com/api/dingcindex.html\"},{\"type\":\"view\",\"name\":\"一卡通退餐\",\"url\":\"http://food.gdeastriver.com/api/tuidingc.html\"}]}," +
+                "{\"name\":\"明细查询\",\"sub_button\":[{\"type\":\"view\",\"name\":\"充值查询\",\"url\":\"http://lllison.viphk.ngrok.org/api/w.html\"},{\"type\":\"view\",\"name\":\"消费查询\",\"url\":\"http://lllison.viphk.ngrok.org/api/w.html\"}]}," +
+                "{\"name\":\"使用帮助\",\"sub_button\":[{\"type\":\"click\",\"name\":\"操作说明\",\"key\":\"click_key1\"},{\"type\":\"view\",\"name\":\"账户认证\",\"url\":\"http://food.gdeastriver.com/api/banding.html\"}]}" +
                 "]}";
 
         System.out.println(responeJsonStr);

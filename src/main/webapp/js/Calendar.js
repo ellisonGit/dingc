@@ -25,10 +25,18 @@ var giYear=gdCurDate.getFullYear();
 var giMonth=gdCurDate.getMonth()+1;  
 var giDay=gdCurDate.getDate();
 var s;
+var openid;
+var currentDateStart;
+var dateEnd;
+openid = getOpenIdFromCookie();//获取openid
+var riqiw=getNowFormatDate();
+currentDateStart= addDate(riqiw,1);
+//默认加载当天日期yymmdd
+
 function $$(){var elements=new Array();for(var i=0;i<arguments.length;i++) {var element=arguments[i];if(typeof(arguments[i])=='string'){element=document.getElementById(arguments[i]);}if(arguments.length==1){return element;}elements.Push(element);}return elements;}  
 Array.prototype.Push=function(){var startLength=this.length;for(var i=0;i<arguments.length;i++){this[startLength+i]=arguments[i];}return this.length;}  
-String.prototype.HexToDec=function(){return parseInt(this,16);}  
-String.prototype.cleanBlank=function(){return this.isEmpty()?"":this.replace(/\s/g,"");}  
+String.prototype.HexToDec=function(){return parseInt(this,16);}
+String.prototype.cleanBlank=function(){return this.isEmpty()?"":this.replace(/\s/g,"");}
 function checkColor(){var color_tmp=(arguments[0]+"").replace(/\s/g,"").toUpperCase();var model_tmp1=arguments[1].toUpperCase();var model_tmp2="rgb("+arguments[1].substring(1,3).HexToDec()+","+arguments[1].substring(1,3).HexToDec()+","+arguments[1].substring(5).HexToDec()+")";model_tmp2=model_tmp2.toUpperCase();if(color_tmp==model_tmp1 ||color_tmp==model_tmp2){return true;}return false;}  
 function $V(){return $$(arguments[0]).value;}  
 function fPopCalendar(evt,popCtrl,dateCtrl){  
@@ -36,7 +44,7 @@ function fPopCalendar(evt,popCtrl,dateCtrl){
     gdCtrl=dateCtrl;  
     if(gdCtrl.value == ''){  
         fSetYearMon(giYear,giMonth);
-        alert("a:"+fSetYearMon(giYear,giMonth));
+       // alert("a:"+fSetYearMon(giYear,giMonth));
     }else{  
         var aDates = gdCtrl.value.split('-')  
         fSetYearMon(aDates[0],aDates[1]);
@@ -45,11 +53,13 @@ function fPopCalendar(evt,popCtrl,dateCtrl){
       
     var point=fGetXY(popCtrl);  
     with($$("calendardiv").style){
-        left=point.x+"px";  
+        //left=point.x+"px";
+        left=160+"px";
         top=(point.y+popCtrl.offsetHeight+1)+"px";  
         visibility='visible';  
         //zindex='99999';  
-        position='absolute';  
+        position='absolute';
+
     }  
     $$("calendardiv").focus();
 
@@ -66,19 +76,22 @@ function fSetDate(iYear,iMonth,iDay){
 
     //ellison s
     riqiValue= gdCtrl.value=iYear+splitChar+iMonthNew+splitChar+iDayNew;
-    //alert("sdf:"+riqiValue );
+
+  //alert("sdf:"+riqiValue );
 
      s=riqi.value;//开始时间
     var e=riqitwo.value;//结束时间
+    dateEnd=e;
     var subD=getDateByTimeStr(s);//字符转日期类型
     var subE=getDateByTimeStr(e);//字符转日期类型
     if(subD<new Date(currentDateStart.replace(/-/g, '/'))){
         alert("选择不能小于当前日期哦！");
+        return;
     }if(subE<new Date(currentDateStart.replace(/-/g, '/'))){
         alert("选择不能小于当前日期哦！");
+        return;
     }
     else{
-
     var zs=getDateByTimeStr(s);
     var ze=getDateByTimeStr(e);
     var date=(ze.getTime()-zs.getTime())/(1000*60*60*24);/*开始时间和结束时间之差*/
@@ -91,7 +104,7 @@ function fSetDate(iYear,iMonth,iDay){
     }else{
         riqitwo.value="";
       //  alert("rqiqo:"+riqitwo.value);
-        datetime.value=riqiValue;
+        inputdate.value=riqiValue;
     }
 
 
@@ -103,6 +116,7 @@ function fSetDate(iYear,iMonth,iDay){
 }
 function ctb(s) {
     $("#tableFor").find("tr").remove();
+    $("#tableFor").find("table").remove();
     for(var i=0;i < subSum;i++) {
        // var date;
 
@@ -118,20 +132,50 @@ function ctb(s) {
         var day = newDate.getDate().toString().length == 1 ? '0' + newDate.getDate() : newDate.getDate();
         current=[newDate.getFullYear(), month, day].join('-');
 //alert("jian:"+current);
-        $("#tableFor").append("<tr><td width=\"25%\"><input  class=\"inp\"  readonly=\"readonly\" id=\"datetime\" value="+ current+"></td>"+
-            /* "<td><input type=\"checkbox\" name=\"can\" value="+1+"></td>"+
-             "<td><input type=\"checkbox\" name=\"can\" value="+2+"></td>"+
-             "<td><input type=\"checkbox\" name=\"can\" value="+3+"></td>"+
-             "<td><input type=\"checkbox\" name=\"can\" value="+4+"></td>"+*/
-            "<td width=\"15%\"><input type=\"checkbox\" name=\"can\" value="+parseInt(1+i*4)+"></td>"+
-            "<td width=\"15%\"><input type=\"checkbox\" name=\"can\" value="+parseInt(2+i*4)+"></td>"+
-            "<td width=\"15%\"><input type=\"checkbox\" name=\"can\" value="+parseInt(3+i*4)+"></td>"+
-            "<td width=\"15%\"><input type=\"checkbox\" name=\"can\" value="+parseInt(4+i*4)+"></td>"+
-            "</tr>");
+        var xingqi=week(current);//根据日期获取星期几
+        var mal="male";
+        var a="zzw";
+        var b="zwy"
+        var d="inputdate";
+        $("#tableFor").append("<table  id="+ i +" style=\"\n" +
+            "    width: 100%;border-collapse:collapse;\n" +
+            "\"><tr><td id=" + d + i + " class=\"inp\" width=\"20%\"> " + current + "</td><td class='tdc' width=\"15%\">"+xingqi+"</td> " +
+            "</tr>"+
+            "<tr>" +
+            "<td class='cu'>快速订餐</td> " +
+            "<td></td> " +
+            "</tr>" +
+            "<tr>" +
+            "<td><label><input  type=\"radio\"  onclick=\"bt("+ i +")\"  name=" + a + i + " value=" + a + "><span></span>早中晚</label> </td>" +
+            "<td> <label><input type=\"radio\"  onclick=\"bty("+ i +")\" name=" + a + i + "  value=" + b + "><span></span>中晚夜</label></td>" +
+            "</tr>" +
+            "<tr>" +
+            "<td class='cu'>自选餐别</td> " +
+            "<td></td></tr>" +
+            "<tr>" +
+            "  <td width=\"20%\"><input type=\"checkbox\" class=\"zao\"  name=\"can\"  value=\"1\" id=" + mal + parseInt(1 + i * 4) + " />\n" +
+            "<label for=" + mal + parseInt(1 + i * 4) + " class=\"choose-label\"></label></td>\n" +
+            "<td width=\"15%\">早餐</td>\n" +
+            "</tr>" +
+            "<tr>" +
+            "<td width=\"30%\"><input type=\"checkbox\" class=\"zhong\" name=\"can\" value=\"2\" id=" + mal + parseInt(2 + i * 4) + " />\n" +
+            "<label for=" + mal + parseInt(2 + i * 4) + " class=\"choose-label\"></label></td>\n" +
+            "<td width=\"30%\" >午餐</td>\n" +
+            "</tr>" +
+            "<tr>" +
+            "<td width=\"20%\"><input type=\"checkbox\" class=\"wan\" name=\"can\" value=\"3\" id=" + mal + parseInt(3 + i * 4) + " />\n" +
+            "<label for=" + mal + parseInt(3 + i * 4) + " class=\"choose-label\"></label></td>\n" +
+            "<td width=\"15%\">晚餐</td>\n" +
+            "</tr>" +
+            "<tr>" +
+            "<td width=\"30%\"><input type=\"checkbox\" name=\"can\" value=\"4\" id=" + mal + parseInt(4 + i * 4) + " class=\"chooseBtn\"/>\n" +
+            "<label for=" + mal + parseInt(4 + i * 4) + " class=\"choose-label\"></label></td>\n" +
+            "<td width=\"30%\">夜宵</td>\n" +
+            "</tr></table>");
 
     }
 
-
+    findWeek2(openid);
 }
 
 
@@ -253,7 +297,7 @@ function getDateDiv(){
         noSelectForFireFox="-moz-user-select:none;";  
     }  
     var dateDiv="";  
-    dateDiv += "<div id='calendardiv'  onclick='event.cancelBubble=true' " + noSelectForIE + " style='" + noSelectForFireFox + "position:absolute;z-index:99999;visibility:hidden;border:1px solid #999999;width:174px;'>";  
+    dateDiv += "<div id='calendardiv'  onclick='event.cancelBubble=true' " + noSelectForIE + " style='" + noSelectForFireFox + "position:absolute;z-index:99999;visibility:hidden;border:1px solid #999999;width:174px;'>";
     dateDiv += "<table border='0' bgcolor='#E0E0E0' cellpadding='1' cellspacing='1' width='100%'  >";  
     dateDiv+="<tr>";  
     dateDiv+="<td><input type='button' id='PrevMonth' value='<' style='height:20px;width:20px;font-weight:bolder;' onclick='fPrevMonth()'>";  
@@ -287,7 +331,7 @@ with(document){onclick=fHideCalendar;write(getDateDiv());}
 // 月(M)、日(d)、小时(h)、分(m)、秒(s)、季度(q) 可以用 1-2 个占位符，   
 // 年(y)可以用 1-4 个占位符，毫秒(S)只能用 1 个占位符(是 1-3 位的数字)   
 // 例子：   
-// (new Date()).Format("yyyy-MM-dd hh:mm:ss.S") ==> 2006-07-02 08:09:04.423   
+// (new Date()).Format("yyyy-MM-dd hh:mm:ss.S") ==> 2006-07-02 08:09:04.42
 // (new Date()).Format("yyyy-M-d h:m:s.S") ==> 2006-7-2 8:9:4.18   
 Date.prototype.Format = function(fmt){  
     var o = {   
@@ -313,3 +357,153 @@ function getDateByTimeStr(timeStr) {
     var d = timeArr[0].split("-");
     return new Date(d[0], (d[1] - 1), d[2]);
 }
+//根据日期计算去星期几
+function week(dtime) {
+    var arys1 = new Array();
+    arys1 = dtime.split('-');     //日期为输入日期，格式为 2013-3-10
+    var ssdate = new Date(arys1[0], parseInt(arys1[1] - 1), arys1[2]);
+    var week1 = String(ssdate.getDay()).replace("0", "日").replace("1", "一").replace("2", "二").replace("3", "三").replace("4", "四").replace("5", "五").replace("6", "六")//就是你要的星期几
+    var week = "星期" + week1; //就是你要的星期几
+    return week;
+}
+
+function findWeek2(openid) { //查询周订餐信息
+    var tadate=currentDateStart;
+    //alert(tadate);
+    var tadatetwo= dateEnd;
+    var reg = /-| |:/g;
+    var beginDate= tadate.replace(reg,'');
+    var endDate=tadatetwo.replace(reg,'');
+    $.ajax({
+        type: "post",
+        url: "/api/meal/selectmealOrder",
+        data: JSON.stringify({"beginDate":beginDate,"endDate":endDate,"openid":openid}),
+        dataType: "json",
+        contentType: "application/json",
+        async: false,
+        success: function (data) {
+            var res=data.data;
+            var riqiTime = "";//存在日期
+            var j=0;
+            var tableid="#0";
+            if(res.length>0){
+                for(var i=0;i < res.length;i++) {
+                    var data1 = res[i];
+                    var thisTime = data1.DATE;
+                    if(thisTime ==riqiTime){//判断当前日期是不是等于存在日期
+                        if(data1.BOOKID!=null||data1.BOOKID>0){//是否已订餐
+                            $(""+ tableid +" input[value="+data1.MEAL_ID+"]").attr('checked',"checked");
+                            $(""+ tableid +"  input[value="+data1.MEAL_ID+"]").attr('disabled',"disabled");
+                            $(""+ tableid +"  input[value="+data1.MEAL_ID+"]").attr('class',"type"+data1.MEAL_ID);//修改class名称
+                            $(""+ tableid +" input[value="+data1.MEAL_ID+"]").attr('name',"yidingcan");//修改name名称
+                        }
+                    }else{
+                        tableid="#"+j++;//tableid
+                        if(data1.BOOKID!=null||data1.BOOKID>0){
+                            $(""+ tableid +" input[value="+data1.MEAL_ID+"]").attr('checked',"checked");
+                            $(""+ tableid +"  input[value="+data1.MEAL_ID+"]").attr('disabled',"disabled");
+                            $(""+ tableid +"  input[value="+data1.MEAL_ID+"]").attr('class',"type"+data1.MEAL_ID);//修改class名称
+                            $(""+ tableid +" input[value="+data1.MEAL_ID+"]").attr('name',"yidingcan");//修改name名称
+
+                        }
+
+                    }
+
+                    riqiTime = thisTime;
+
+                }
+
+            }
+        }
+    });
+}
+
+function getOpenIdFromCookie(){
+    //测试值
+    //return "123"
+    var cookieStr = decodeURIComponent(getCookie("wx_user_info"));
+    if(cookieStr != null && cookieStr != "undefined" && cookieStr !=""){
+        cookieStr = JSON.parse(cookieStr);
+        return cookieStr.openid;
+    }else{
+        return "";
+    }
+}
+//获取url后面参数的值
+function getQueryString(name) {
+    var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)"); //构造一个含有目标参数的正则表达式对象
+    var r = window.location.search.substr(1).match(reg); //匹配目标参数
+    if (r != null) return decodeURIComponent(r[2]);
+    return null; //返回参数值
+}
+function getCookie(name){
+    var strcookie = document.cookie;//获取cookie字符串
+    var arrcookie = strcookie.split("; ");//分割
+    //遍历匹配
+    for ( var i = 0; i < arrcookie.length; i++) {
+        var arr = arrcookie[i].split("=");
+        if (arr[0] == name){
+            return arr[1];
+        }
+    }
+    return "";
+}
+
+function addDate(date, days) {
+    if (days == undefined || days == '') {
+        days = 1;
+    }
+    var date = new Date(date);
+    date.setDate(date.getDate() + days);
+    var month = date.getMonth() + 1;
+    var day = date.getDate();
+    return date.getFullYear() + '-' + getFormatDate(month) + '-' + getFormatDate(day);
+}
+
+//获取今天日期yymmdd
+function getNowFormatDate() {
+    var date = new Date();
+    var seperator1 = "-";
+    var year = date.getFullYear();
+    var month = date.getMonth() + 1;
+    var strDate = date.getDate();
+    if (month >= 1 && month <= 9) {
+        month = "0" + month;
+    }
+    if (strDate >= 0 && strDate <= 9) {
+        strDate = "0" + strDate;
+    }
+    var currentdate = year + seperator1 + month + seperator1 + strDate;
+    return currentdate;
+}
+// 日期月份/天的显示，如果是1位数，则在前面加上'0'
+function getFormatDate(arg) {
+    if (arg == undefined || arg == '') {
+        return '';
+    }
+
+    var re = arg + '';
+    if (re.length < 2) {
+        re = '0' + re;
+    }
+
+    return re;
+}
+
+//获取当前时间，格式YYYY-MM-DD
+function getNowFormatDate2() {
+    var date = new Date();
+    var seperator1 = "-";
+    var year = date.getFullYear();
+    var month = date.getMonth() + 1;//date.getMonth()得到的月份从0开始
+    var strDate = date.getDate();
+    if (month >= 1 && month <= 9) {
+        month = "0" + month;
+    }
+    if (strDate >= 0 && strDate <= 9) {
+        strDate = "0" + strDate;
+    }
+    var currentdate = year + seperator1 + month + seperator1 + strDate;
+    return currentdate;
+}
+

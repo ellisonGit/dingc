@@ -1,8 +1,9 @@
 h3 {
     text-align: center;
-    color: dodgerblue;
+    color: #44B549;
     font-family: '微软雅黑', '宋体', sans-serif;
-    size: 13px;
+    size: 10px;
+    margin-top: -0.3rem;
 }
 
 .userPhoto {
@@ -29,7 +30,7 @@ h3 {
 
 .botton {
     text-align: center;
-    background: dodgerblue; /*#19b5ff;*/
+    background: #44B549; /*#19b5ff;*/
     color: #fff;
     border-radius: 0.2rem;
     line-height: 2rem;
@@ -40,7 +41,28 @@ h3 {
     float: left;
     margin-left: 2rem;
     position: relative;
+    border: 5px solid transparent;
+    border-bottom-color: rgba(0,0,0,0.35);
 
+}
+.botton2 {
+    text-align: center;
+    background: #44B549; /*#19b5ff;*/
+    color: #fff;
+    border-radius: 0.2rem;
+    line-height: 2rem;
+    height: 2rem;
+    width: 20%;
+    margin: 0 auto;
+    font-size: 0.85rem;
+    float: left;
+    margin-left: 2rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    position: relative;
+    clear:both;
+    border: 5px solid transparent;
+    border-bottom-color: rgba(0,0,0,0.35);
 }
 
 .botton:active {
@@ -71,26 +93,36 @@ hr {
 
 .inputc {
     width: 5.3rem;
-    margin-left: 2rem;
-    margin-top: 1rem;
+    margin-left: 1rem;
+    margin-top:4.3rem;
+    text-align: center;
 }
 
 .inputtwo {
     width: 5.3rem;
+    text-align: center;
     /*	visibility: hidden;*/
+}
+.dayinput {
+    width: 5.3rem;
+    margin-left:1.1rem;
+    margin-top:0.6rem;
+    text-align: center;
 }
 
 .tabb {
     border: 1px solid rgba(116, 107, 128, 0.45);
+    border-left:none;border-right:none;border-top: none;
     width: 100%;
     height: 10%;
+
 }
 
 .tabbb {
-    border: 1px  solid rgba(116, 107, 128, 0.45);
+  /*  border: 1px  solid rgba(116, 107, 128, 0.45);*/
     width: 100%;
     height: 10px;
-    margin-top: 1rem;
+    /*margin-top: 1rem;*/
     margin-bottom: -2rem;
 }
 
@@ -102,16 +134,27 @@ hr {
 
 
 td {
-    border: 1px solid rgba(116, 107, 128, 0.45);
+    border: 0px solid rgba(116, 107, 128, 0.45);
     text-align: center;
     border-collapse: collapse;
+    font-size: 14px;
+    height: 20px;
+}
 
+th{
+    border: 0px solid rgba(116, 107, 128, 0.45);
+    text-align: center;
+    border-collapse: collapse;
+    font-size: 12px;
+    background-color: #F1F1F1;
 }
 
 .tab {
-    margin-top: 2rem;
+    margin-top: 0.7rem;
     overflow: scroll;
-    height: 300px;
+    height: 310px;
+    width: 100%;
+
 }
 
 .submit {
@@ -129,5 +172,278 @@ td {
     width: 80%;
 }
 .btninput{
+    text-align: center;
+    background: #44B549; /*#19b5ff;*/
+    color: #fff;
+    border-radius: 0.2rem;
+    line-height: 2rem;
+    height: 2.3rem;
+    width: 100%;
+    margin: 0 auto;
+    font-size: 0.85rem;
+    position: relative;
+    font-size: 16px;
+
+
+;
+}
+.btninput:active {
+    top: 5px; /**向下偏移2px **/
+}
+
+/* 开关按钮样式start*/
+.chooseBtn {
+    display: none;/*隐藏的是勾选的复选框*/
+}
+/* 开关按钮样式start*/
+.zao {
+    display: none;/*隐藏的是勾选的复选框*/
+}
+/* 开关按钮样式start*/
+.zhong {
+    display: none;/*隐藏的是勾选的复选框*/
+}
+/* 开关按钮样式start*/
+.wan {
+    display: none;/*隐藏的是勾选的复选框*/
+}
+/* 开关按钮样式start*/
+.ye {
+    display: none;/*隐藏的是勾选的复选框*/
+}
+/* 开关按钮样式start*/
+.type1 {
+    display: none;/*隐藏的是勾选的复选框*/
+}
+/* 开关按钮样式start*/
+.type2 {
+    display: none;/*隐藏的是勾选的复选框*/
+}
+/* 开关按钮样式start*/
+.type3 {
+    display: none;/*隐藏的是勾选的复选框*/
+}
+/* 开关按钮样式start*/
+.type4 {
+    display: none;/*隐藏的是勾选的复选框*/
+}
+
+/* 开关按钮样式start*/
+.tui {
+    display: none;/*隐藏的是勾选的复选框*/
+}
+.choose-label {
+    /*box-shadow属性向框添加一个或多个阴影。可以使用 border-image-* 属性来构造漂亮的可伸缩按钮*/
+    box-shadow: #ccc 0px 0px 0px 1px;
+    width: 40px;/*按钮的宽度*/
+    height: 20px;
+    display: inline-block;
+    border-radius: 20px;
+    position: relative;
+    background-color: #bdbdbd;
+    overflow: hidden;
+}
+
+
+
+
+.choose-label:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    border-radius: 20px;
+    background-color: #fff;
+    z-index: 20;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+}
+/*加号（+）为：相邻同胞选择器*/
+/*“+”是选择相邻兄弟，叫做“相邻兄弟选择器”。如果需要选择紧接在另一个元素后的元素，而且二者有相同的父元素，可以使用相邻兄弟选择器*/
+.chooseBtn:checked + label.choose-label:before {/*:before 表示在元素之前插入新的内容*/
+    /*选择紧接在.chooseBtn元素后出现的.choose-label元素(需要满足.chooseBtn和.choose-label元素拥有共同的父元素)*/
+    left: 20px;
+}
+.chooseBtn:checked + label.choose-label {
+    background-color: #44B549;
+}
+
+
+.zao:checked + label.choose-label:before {/*:before 表示在元素之前插入新的内容*/
+    /*选择紧接在.chooseBtn元素后出现的.choose-label元素(需要满足.chooseBtn和.choose-label元素拥有共同的父元素)*/
+    left: 20px;
+}
+.zao:checked + label.choose-label {
+    background-color: #44B549;
+}
+
+
+.zhong:checked + label.choose-label:before {/*:before 表示在元素之前插入新的内容*/
+    /*选择紧接在.chooseBtn元素后出现的.choose-label元素(需要满足.chooseBtn和.choose-label元素拥有共同的父元素)*/
+    left: 20px;
+}
+.zhong:checked + label.choose-label {
+    background-color: #44B549;
+}
+
+
+.wan:checked + label.choose-label:before {/*:before 表示在元素之前插入新的内容*/
+    /*选择紧接在.chooseBtn元素后出现的.choose-label元素(需要满足.chooseBtn和.choose-label元素拥有共同的父元素)*/
+    left: 20px;
+}
+.wan:checked + label.choose-label {
+    background-color: #44B549;
+}
+
+.ye:checked + label.choose-label:before {/*:before 表示在元素之前插入新的内容*/
+    /*选择紧接在.chooseBtn元素后出现的.choose-label元素(需要满足.chooseBtn和.choose-label元素拥有共同的父元素)*/
+    left: 20px;
+}
+.ye:checked + label.choose-label {
+    background-color: #44B549;
+}
+
+
+
+.type1:checked + label.choose-label:before {/*:before 表示在元素之前插入新的内容*/
+    /*选择紧接在.chooseBtn元素后出现的.choose-label元素(需要满足.chooseBtn和.choose-label元素拥有共同的父元素)*/
+    left: 20px;
+}
+.type1:checked + label.choose-label {
+    background-color: #496EE2;
+}
+.type2:checked + label.choose-label:before {/*:before 表示在元素之前插入新的内容*/
+    /*选择紧接在.chooseBtn元素后出现的.choose-label元素(需要满足.chooseBtn和.choose-label元素拥有共同的父元素)*/
+    left: 20px;
+}
+.type2:checked + label.choose-label {
+    background-color: #496EE2;
+}
+.type3:checked + label.choose-label:before {/*:before 表示在元素之前插入新的内容*/
+    /*选择紧接在.chooseBtn元素后出现的.choose-label元素(需要满足.chooseBtn和.choose-label元素拥有共同的父元素)*/
+    left: 20px;
+}
+.type3:checked + label.choose-label {
+    background-color: #496EE2;
+}
+.type4:checked + label.choose-label:before {/*:before 表示在元素之前插入新的内容*/
+    /*选择紧接在.chooseBtn元素后出现的.choose-label元素(需要满足.chooseBtn和.choose-label元素拥有共同的父元素)*/
+    left: 20px;
+}
+.type4:checked + label.choose-label {
+    background-color: #496EE2;
+}
+
+
+.tui:checked + label.choose-label:before {/*:before 表示在元素之前插入新的内容*/
+    /*选择紧接在.chooseBtn元素后出现的.choose-label元素(需要满足.chooseBtn和.choose-label元素拥有共同的父元素)*/
+    left: 20px;
+}
+.tui:checked + label.choose-label {
+    background-color: #496EE2;
+}
+
+
+
+
+/* 开关按钮样式end*/
+
+input[type="radio"] {
+    display: none;
+}
+input[type="radio"]+span {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    vertical-align: middle;
+    border-radius: 50%;
+    border: 1px solid #999;
+    background-color: #fff;
+}
+input[type="radio"]:checked+span {
+    width: 5px;
+    height: 5px;
+    border: 6px solid #44B549;
+    background-color: #fff;
+}
+.inp{
     width: 20%;
+    border: 0px solid rgba(116, 107, 128, 0.45);
+    text-align: center;
+    border-collapse: collapse;
+    font-size: 14px;
+    background-color: #DDDDDD;
+    font-weight:600 ;
+    border:none;
+    border-left:none;
+    border-right:none;
+    height: 110%;
+}
+.tdc{
+    border: 0px solid rgba(116, 107, 128, 0.45);
+    text-align: center;
+    border-collapse: collapse;
+    font-size: 14px;
+    background-color: #DDDDDD;
+    font-weight:600 ;
+    border:none;
+
+
+}
+#inputdate{
+    border: 0px solid rgba(116, 107, 128, 0.45);
+    text-align: center;
+    border-collapse: collapse;
+    font-size: 14px;
+    background-color: #DDDDDD;
+    font-weight:600 ;
+    border:none;
+    border-left:none;
+    border-right:none;
+    width: 110%;
+}
+.lab{
+    text-align: center;
+    color: #ce3c39;
+    font-family: '微软雅黑', '宋体', sans-serif;
+    font-size: 14px;
+    float: right;
+    margin-right: 2rem;
+    margin-top: 0.6rem;
+
+}
+
+.bulue{
+    text-align: center;
+    color: #ce3c39;
+    font-family: '微软雅黑', '宋体', sans-serif;
+    font-size: 12px;
+
+}
+
+body{
+ /*   background: url("http://lllison.viphk.ngrok.org/api/img/beij.png");*/
+    background: url("http://food.gdeastriver.com/api/img/beij.png");
+}
+
+.dateriqi{
+    clear:both;
+
+}
+
+#numBox{
+    color: #44B549;
+    font-family: '微软雅黑', '宋体', sans-serif;
+    font-size: 18px;
+}
+
+.calendardiv{
+    left: 200px;
+}
+
+.cu{
+    font-size: 15px;
+    font-weight:700;
 }

@@ -64,14 +64,14 @@ public class WxServerUtil {
 	 * 获取生成带参数的二维码中 需要的ticket
 	 * @return
 	 */
-	public static String getQrcodeTickect(){
+/*	public static String getQrcodeTickect(){
 		String url = "https://api.weixin.qq.com/cgi-bin/qrcode/create?access_token=%1$s";
 		url = String.format(url,getAccessToken(WechatAccount.TEST_ACCOUNT.getAppId(), WechatAccount.TEST_ACCOUNT.getSecret()));
 		String param = "{\"expire_seconds\": 2592000, \"action_name\": \"QR_SCENE\", \"action_info\": {\"scene\": {\"scene_str\": \"dahuangfeng\"}}}";
 		String result = MyRequestUtil.sendPost(url,param);
 		System.out.println(result);
 		return result ;
-	}
+	}*/
 
 
 	public static void main(String[] args) {

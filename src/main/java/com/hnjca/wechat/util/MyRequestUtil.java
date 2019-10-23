@@ -72,6 +72,7 @@ public class MyRequestUtil {
 	     * @return 所代表远程资源的响应结果
 	     */
 	    public static String sendPost(String url, String param) {
+	    	System.out.println("POST提交参数："+param);
 	        PrintWriter out = null;
 	        BufferedReader in = null;
 	        String result = "";

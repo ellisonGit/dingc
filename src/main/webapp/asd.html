@@ -1,65 +1,94 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html>
-<head lang="en">
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
     <meta charset="UTF-8">
-    <title> 选项卡</title>
-    <style type="text/css">
-        /* CSS样式制作 */
-        *{padding:0px; margin:0px;}
-        a{ text-decoration:none; color:black;}
-        a:hover{text-decoration:none; color:#336699;}
-        #tab{width:270px; padding:5px;height:150px;margin:20px;}
-        #tab ul{list-style:none; display:;height:30px;line-height:30px; border-bottom:2px #C88 solid;}
-        #tab ul li{background:#FFF;cursor:pointer;float:left;list-style:none height:29px; line-height:29px;padding:0px 10px; margin:0px 10px; border:1px solid #BBB; border-bottom:2px solid #C88;}
-        #tab ul li.on{border-top:2px solid Saddlebrown; border-bottom:2px solid #FFF;}
-        #tab div{height:200px;width:250px; line-height:24px;border-top:none;  padding:1px; border:1px solid #336699;padding:10px;}
-        .hide{display:none;}
-    </style>
-
-    <script type="text/javascript">
-        // JS实现选项卡切换
-        window.onload = function(){
-            var myTab = document.getElementById("tab");    //整个div
-            var myUl = myTab.getElementsByTagName("ul")[0];//一个节点
-            var myLi = myUl.getElementsByTagName("li");    //数组
-            var myDiv = myTab.getElementsByTagName("div"); //数组
-
-            for(var i = 0; i<myLi.length;i++){
-                myLi[i].index = i;
-                myLi[i].onclick = function(){
-                    for(var j = 0; j < myLi.length; j++){
-                        myLi[j].className="off";
-                        myDiv[j].className = "hide";
-                    }
-                    this.className = "on";
-                    myDiv[this.index].className = "show";
-                }
-            }
-        }
+    <title>单选按钮取消选中的三种方式</title>
+    <script type="text/javascript" src="http://lib.sinaapp.com/js/jquery/1.7.2/jquery.min.js">
     </script>
 
+    <style>
+
+        #button {
+            font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+            position: absolute;
+            font-size: 1.5em;
+            text-transform: uppercase;
+            padding: 7px 20px;
+            left: 50%;
+            width: 200px;
+            margin-left: -100px;
+            top: 50%;
+            border-radius: 10px;
+            color: white;
+            text-shadow: -1px -1px 1px rgba(0,0,0,0.8);
+            border: 5px solid transparent;
+            border-bottom-color: rgba(0,0,0,0.35);
+            background: #44B549;
+            cursor: pointer;
+
+            animation: pulse 1s infinite alternate;
+            transition: background 0.4s, border 0.2s, margin 0.2s;
+        }
+        #button:hover {
+            background: hsla(220, 100%, 60%, 1);
+            margin-top: -1px;
+
+            animation: none;
+        }
+        #button:active {
+            border-bottom-width: 0;
+            margin-top: 5px;
+        }
+        @keyframes pulse {
+            0% {
+                margin-top: 0px;
+            }
+            100% {
+                margin-top: 6px;
+            }
+        }
+
+
+
+    </style>
+    <script type="text/javascript">
+        $(function(){
+            $('input:radio').click(function(){
+                //alert(this.checked);
+                //
+
+                var domName = $(this).attr('name');
+
+                var $radio = $(this);
+                // if this was previously checked
+                if ($radio.data('waschecked') == true){
+                    $radio.prop('checked', false);
+                    $("input:radio[name='" + domName + "']").data('waschecked',false);
+                    //$radio.data('waschecked', false);
+                } else {
+                    $radio.prop('checked', true);
+                    $("input:radio[name='" + domName + "']").data('waschecked',false);
+                    $radio.data('waschecked', true);
+                }
+            });
+        });
+    </script>
 </head>
+<script src="js/prefixfree.min.js"></script>
 <body>
-<!-- HTML页面布局 -->
-<div id = "tab">
-    <ul>
-        <li class="on">测试</li>
-        <li class="off">测试2</li>
-        <li class="off">测试3</li>
-    </ul>
-    <div id="firstPage" class="hide">
-        <a href = "#">测试</a><br/>
+<p>您喜欢哪款浏览器？</p>
 
-    </div>
-    <div id="secondPage" class="show">
-        <a href = "#">测试2</a><br/>
+<button id="button">click me</button>
 
-    </div>
-    <div id="thirdPage" class = "hide">
-        <a href = "#">测试3</a><br/>
-
-    </div>
-</div>
-
+<canvas id="myCanvas" width="500" height="500"></canvas>
+<form>
+    <input style="display:none;" id="hidebrowser" type="radio" name="browser" value="">
+    <input type="radio" name="browser" value="Internet Explorer">Internet Explorer<br />
+    <input type="radio" name="browser" value="Firefox">Firefox<br />
+    <input type="radio" name="browser" value="Netscape">Netscape<br />
+    <input type="radio" name="browser" value="Opera">Opera<br />
+</form>
+<script src="js/txt.wav.min.js"></script>
 </body>
 </html>
