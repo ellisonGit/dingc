@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="stylesheet" href="css/mui.min.css?v=2019-09-17 11:53:40 +0800">
+    <link rel="stylesheet" href="css/docs.css?v=2019-09-17 11:53:40 +0800">
+    <link rel="stylesheet" href="css/caipu.css?id=003">
+    <script type="text/javascript" src="wx/js/jquery-1.8.2.min.js"></script>
+    <script src="js/common.js?id=005"></script>
+    <script src="js/mui.min.js?v=001"></script>
+    <script type="text/javascript" src="js/caipu.js?v=2019-09-17 11:53:40 +0800"></script>
+
+</head>
+<body>
+<header class="mui-bar mui-bar-nav">
+    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+    <h1 class="mui-title">菜谱计划</h1>
+</header>
+<div class="mui-content">
+    <div class="mui-card">
+        <ul id="tableFor" class="mui-table-view">
+            <!--  <li class="mui-table-view-cell mui-collapse">
+                 <a class="mui-navigate-right" href="#">星期一 &nbsp;&nbsp;&nbsp;<span>2019-09-16</span></a>
+                 <div class="mui-collapse-content">
+                     <form class="mui-input-group">
+                         <div class="mui-input-row">
+                             <label>早餐</label>
+                             <label  ><a href="javascript:showSign();">粥、炒粉、汤粉</a></label>
+                         </div>
+                         <div class="mui-input-row">
+                             <label>中餐</label>
+                             <label>番茄炒蛋、蘑菇滑鸡、蜜汁叉烧、农家一碗香</label>
+                         </div>
+                         <div class="mui-input-row">
+                             <label>晚餐</label>
+                             <label>茄子肉沫、手撕包菜、白切鸡、烧鸭</label>
+                         </div>
+                         <div class="mui-input-row">
+                             <label>夜宵</label>
+                             <label>砂锅粥、炒牛河、养生汤、绿豆糖水</label>
+                         </div>
+
+                     </form>
+                 </div>
+             </li>
+            <li class="mui-table-view-cell mui-collapse">
+                 <a class="mui-navigate-right" href="#">星期二&nbsp;&nbsp;&nbsp;<span>2019-09-17</span></a>
+                 <div class="mui-collapse-content">
+                     <form class="mui-input-group">
+                         <div class="mui-input-row">
+                             <label>早餐</label>
+                             <label><a href="javascript:showSign();">粥、炒粉、汤粉</a></label>
+                         </div>
+                         <div class="mui-input-row">
+                             <label>中餐</label>
+                             <label>番茄炒蛋、蘑菇滑鸡、蜜汁叉烧、农家一碗香</label>
+                         </div>
+                         <div class="mui-input-row">
+                             <label>晚餐</label>
+                             <label>茄子肉沫、手撕包菜、白切鸡、烧鸭</label>
+                         </div>
+                         <div class="mui-input-row">
+                             <label>夜宵</label>
+                             <label>砂锅粥、炒牛河、养生汤、绿豆糖水</label>
+                         </div>
+
+                     </form>
+                 </div>
+             </li>
+             <li class="mui-table-view-cell mui-collapse">
+                 <a class="mui-navigate-right" href="#">星期三&nbsp;&nbsp;&nbsp;<span>2019-09-18</span></a>
+                 <div class="mui-collapse-content">
+                     <form class="mui-input-group">
+                         <div class="mui-input-row">
+                             <label>早餐</label>
+                             <label><a href="javascript:showSign();">粥、炒粉、汤粉</a></label>
+                         </div>
+                         <div class="mui-input-row">
+                             <label>中餐</label>
+                             <label>番茄炒蛋、蘑菇滑鸡、蜜汁叉烧、农家一碗香</label>
+                         </div>
+                         <div class="mui-input-row">
+                             <label>晚餐</label>
+                             <label>茄子肉沫、手撕包菜、白切鸡、烧鸭</label>
+                         </div>
+                         <div class="mui-input-row">
+                             <label>夜宵</label>
+                             <label>砂锅粥、炒牛河、养生汤、绿豆糖水</label>
+                         </div>
+
+                     </form>
+                 </div>
+             </li>
+             <li class="mui-table-view-cell mui-collapse">
+                 <a class="mui-navigate-right" href="#">星期四&nbsp;&nbsp;&nbsp;<span>2019-09-19</span></a>
+                 <div class="mui-collapse-content">
+                     <form class="mui-input-group">
+                         <div class="mui-input-row">
+                             <label>早餐</label>
+                             <label><a href="javascript:showSign();">粥、炒粉、汤粉</a></label>
+                         </div>
+                         <div class="mui-input-row">
+                             <label>中餐</label>
+                             <label>番茄炒蛋、蘑菇滑鸡、蜜汁叉烧、农家一碗香</label>
+                         </div>
+                         <div class="mui-input-row">
+                             <label>晚餐</label>
+                             <label>茄子肉沫、手撕包菜、白切鸡、烧鸭</label>
+                         </div>
+                         <div class="mui-input-row">
+                             <label>夜宵</label>
+                             <label>砂锅粥、炒牛河、养生汤、绿豆糖水</label>
+                         </div>
+
+                     </form>
+                 </div>
+             </li>
+             <li class="mui-table-view-cell mui-collapse">
+                 <a class="mui-navigate-right" href="#">星期五&nbsp;&nbsp;&nbsp;<span>2019-09-20</span></a>
+                 <div class="mui-collapse-content">
+                     <form class="mui-input-group">
+                         <div class="mui-input-row">
+                             <label>早餐</label>
+                             <label><a href="javascript:showSign();">粥、炒粉、汤粉</a></label>
+                         </div>
+                         <div class="mui-input-row">
+                             <label>中餐</label>
+                             <label>番茄炒蛋、蘑菇滑鸡、蜜汁叉烧、农家一碗香</label>
+                         </div>
+                         <div class="mui-input-row">
+                             <label>晚餐</label>
+                             <label>茄子肉沫、手撕包菜、白切鸡、烧鸭</label>
+                         </div>
+                         <div class="mui-input-row">
+                             <label>夜宵</label>
+                             <label>砂锅粥、炒牛河、养生汤、绿豆糖水</label>
+                         </div>
+
+                     </form>
+                 </div>
+             </li>
+             <li class="mui-table-view-cell mui-collapse">
+                 <a class="mui-navigate-right" href="#">星期六&nbsp;&nbsp;&nbsp;<span>2019-09-21</span></a>
+                 <div class="mui-collapse-content">
+                     <form class="mui-input-group">
+                         <div class="mui-input-row">
+                             <label>早餐</label>
+                             <label><a href="javascript:showSign();">粥、炒粉、汤粉</a></label>
+                         </div>
+                         <div class="mui-input-row">
+                             <label>中餐</label>
+                             <label>番茄炒蛋、蘑菇滑鸡、蜜汁叉烧、农家一碗香</label>
+                         </div>
+                         <div class="mui-input-row">
+                             <label>晚餐</label>
+                             <label>茄子肉沫、手撕包菜、白切鸡、烧鸭</label>
+                         </div>
+                         <div class="mui-input-row">
+                             <label>夜宵</label>
+                             <label>砂锅粥、炒牛河、养生汤、绿豆糖水</label>
+                         </div>
+
+                     </form>
+                 </div>
+             </li>
+             <li class="mui-table-view-cell mui-collapse">
+                 <a class="mui-navigate-right" href="#">星期日&nbsp;&nbsp;&nbsp;<span>2019-09-22</span></a>
+                 <div class="mui-collapse-content">
+                     <form class="mui-input-group">
+                         <div class="mui-input-row">
+                             <label>早餐</label>
+                             <label><a href="javascript:showSign();">粥、炒粉、汤粉</a></label>
+                         </div>
+                         <div class="mui-input-row">
+                             <label>中餐</label>
+                             <label>番茄炒蛋、蘑菇滑鸡、蜜汁叉烧、农家一碗香</label>
+                         </div>
+                         <div class="mui-input-row">
+                             <label>晚餐</label>
+                             <label>茄子肉沫、手撕包菜、白切鸡、烧鸭</label>
+                         </div>
+                         <div class="mui-input-row">
+                             <label>夜宵</label>
+                             <label>砂锅粥、炒牛河、养生汤、绿豆糖水</label>
+                         </div>
+
+                     </form>
+                 </div>
+             </li>-->
+
+        </ul>
+    </div>
+</div>
+
+<div class="signWrap">
+    <div  class="sign">
+        <a class="signClose" href="javascript:showSign();">点击关闭</a>
+       <img id="imageId" style="width: 99%;"  src="">
+
+    </div>
+</div>
+
+<!--js部分-->
+<script >
+    function showSign(){
+        $(".signWrap").toggle();
+    }
+</script>
+</body>
+</html>

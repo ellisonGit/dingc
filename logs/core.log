@@ -1,0 +1,604 @@
+﻿2019-10-23 09:52:46.712  INFO 14636 --- [main] com.hnjca.wechat.DingCApplication        : Starting DingCApplication on admin-PC with PID 14636 (F:\Ellison\wx-dingc\target\classes started by admin in F:\Ellison\wx-dingc)
+2019-10-23 09:52:46.716 DEBUG 14636 --- [main] com.hnjca.wechat.DingCApplication        : Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2019-10-23 09:52:46.716  INFO 14636 --- [main] com.hnjca.wechat.DingCApplication        : No active profile set, falling back to default profiles: default
+2019-10-23 09:52:46.797  INFO 14636 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@50313382: startup date [Wed Oct 23 09:52:46 CST 2019]; root of context hierarchy
+2019-10-23 09:52:48.454  INFO 14636 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2019-10-23 09:52:48.465  INFO 14636 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-10-23 09:52:48.466  INFO 14636 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.23
+2019-10-23 09:52:48.569  INFO 14636 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring embedded WebApplicationContext
+2019-10-23 09:52:48.570  INFO 14636 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1776 ms
+2019-10-23 09:52:48.692  INFO 14636 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2019-10-23 09:52:48.696  INFO 14636 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-10-23 09:52:48.697  INFO 14636 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-10-23 09:52:48.697  INFO 14636 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2019-10-23 09:52:48.697  INFO 14636 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2019-10-23 09:52:49.006  INFO 14636 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@50313382: startup date [Wed Oct 23 09:52:46 CST 2019]; root of context hierarchy
+2019-10-23 09:52:49.083  INFO 14636 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/meal/mealOrder],methods=[POST || GET],produces=[application/json;charset=utf-8]}" onto public java.lang.String com.hnjca.wechat.controller.DingcController.mealOrder(java.lang.String)
+2019-10-23 09:52:49.084  INFO 14636 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/meal/tuiOrder],methods=[POST || GET],produces=[application/json;charset=utf-8]}" onto public java.lang.String com.hnjca.wechat.controller.DingcController.tuiOrder(java.lang.String)
+2019-10-23 09:52:49.085  INFO 14636 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/meal/selectmealOrder],methods=[POST || GET],produces=[application/json;charset=utf-8]}" onto public java.lang.String com.hnjca.wechat.controller.DingcController.selectmealOrder(java.lang.String)
+2019-10-23 09:52:49.085  INFO 14636 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/meal/selectUserInfo],methods=[POST || GET],produces=[application/json;charset=utf-8]}" onto public java.lang.String com.hnjca.wechat.controller.DingcController.selectUserInfo(java.lang.String)
+2019-10-23 09:52:49.085  INFO 14636 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/meal/selectMenuInfo],methods=[POST || GET],produces=[application/json;charset=utf-8]}" onto public java.lang.String com.hnjca.wechat.controller.DingcController.selectMenuInfo(java.lang.String)
+2019-10-23 09:52:49.085  INFO 14636 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/meal/selectmealInfo],methods=[POST || GET],produces=[application/json;charset=utf-8]}" onto public java.util.Map<java.lang.String, java.lang.String> com.hnjca.wechat.controller.DingcController.selectmealInfo(java.lang.String)
+2019-10-23 09:52:49.086  INFO 14636 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/meal/selectmealTongji],methods=[POST || GET],produces=[application/json;charset=utf-8]}" onto public java.lang.String com.hnjca.wechat.controller.DingcController.selectmealTongji(java.lang.String)
+2019-10-23 09:52:49.086  INFO 14636 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/meal/selectmeald],methods=[POST || GET],produces=[application/json;charset=utf-8]}" onto public java.lang.String com.hnjca.wechat.controller.DingcController.selectmealOrderTongji(java.lang.String)
+2019-10-23 09:52:49.088  INFO 14636 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/hnjca/index],methods=[GET],produces=[application/json;charset=utf-8]}" onto public void com.hnjca.wechat.controller.HnjcaController.get(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.io.UnsupportedEncodingException
+2019-10-23 09:52:49.089  INFO 14636 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/hnjca/index],methods=[POST],produces=[application/json;charset=utf-8]}" onto public void com.hnjca.wechat.controller.HnjcaController.post(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.io.IOException,org.dom4j.DocumentException
+2019-10-23 09:52:49.089  INFO 14636 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/hnjca/auth],methods=[GET],produces=[application/json;charset=utf-8]}" onto public void com.hnjca.wechat.controller.HnjcaController.auth(java.lang.String,java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.io.IOException
+2019-10-23 09:52:49.090  INFO 14636 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/msgTuiC],methods=[GET],produces=[application/json;charset=utf-8]}" onto public com.hnjca.wechat.vo.ResponseInfo com.hnjca.wechat.controller.PushTemplateMsgController.pushMsgTuiC(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)
+2019-10-23 09:52:49.091  INFO 14636 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/wx/validateBind],methods=[POST || GET],produces=[application/json;charset=utf-8]}" onto public java.lang.String com.hnjca.wechat.controller.WeixinController.validateBind(java.lang.String)
+2019-10-23 09:52:49.091  INFO 14636 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/wx/banding],methods=[POST || GET],produces=[application/json;charset=utf-8]}" onto public java.lang.String com.hnjca.wechat.controller.WeixinController.binding(java.lang.String,java.lang.String,java.lang.String)
+2019-10-23 09:52:49.094  INFO 14636 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-10-23 09:52:49.094  INFO 14636 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-10-23 09:52:49.121  INFO 14636 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-10-23 09:52:49.121  INFO 14636 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-10-23 09:52:49.153  INFO 14636 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-10-23 09:52:49.172  INFO 14636 --- [main] oConfiguration$WelcomePageHandlerMapping : Adding welcome page: ServletContext resource [/index.html]
+2019-10-23 09:52:49.367  INFO 14636 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2019-10-23 09:52:49.420  INFO 14636 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2019-10-23 09:52:49.424  INFO 14636 --- [main] com.hnjca.wechat.DingCApplication        : Started DingCApplication in 3.115 seconds (JVM running for 3.662)
+2019-10-23 09:53:14.466  INFO 14636 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2019-10-23 09:53:14.466  INFO 14636 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2019-10-23 09:53:14.482  INFO 14636 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 16 ms
+2019-10-23 09:53:46.360  INFO 14636 --- [Thread-3] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@50313382: startup date [Wed Oct 23 09:52:46 CST 2019]; root of context hierarchy
+2019-10-23 09:53:46.361  INFO 14636 --- [Thread-3] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2019-10-23 09:53:48.676  INFO 15568 --- [main] com.hnjca.wechat.DingCApplication        : Starting DingCApplication on admin-PC with PID 15568 (F:\Ellison\wx-dingc\target\classes started by admin in F:\Ellison\wx-dingc)
+2019-10-23 09:53:48.679  INFO 15568 --- [main] com.hnjca.wechat.DingCApplication        : No active profile set, falling back to default profiles: default
+2019-10-23 09:53:48.788  INFO 15568 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@50313382: startup date [Wed Oct 23 09:53:48 CST 2019]; root of context hierarchy
+2019-10-23 09:53:50.500  INFO 15568 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2019-10-23 09:53:50.512  INFO 15568 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-10-23 09:53:50.513  INFO 15568 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.23
+2019-10-23 09:53:50.617  INFO 15568 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring embedded WebApplicationContext
+2019-10-23 09:53:50.618  INFO 15568 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1832 ms
+2019-10-23 09:53:50.782  INFO 15568 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2019-10-23 09:53:50.787  INFO 15568 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-10-23 09:53:50.788  INFO 15568 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-10-23 09:53:50.788  INFO 15568 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2019-10-23 09:53:50.789  INFO 15568 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2019-10-23 09:53:51.212  INFO 15568 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@50313382: startup date [Wed Oct 23 09:53:48 CST 2019]; root of context hierarchy
+2019-10-23 09:53:51.280  INFO 15568 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/meal/mealOrder],methods=[POST || GET],produces=[application/json;charset=utf-8]}" onto public java.lang.String com.hnjca.wechat.controller.DingcController.mealOrder(java.lang.String)
+2019-10-23 09:53:51.281  INFO 15568 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/meal/tuiOrder],methods=[POST || GET],produces=[application/json;charset=utf-8]}" onto public java.lang.String com.hnjca.wechat.controller.DingcController.tuiOrder(java.lang.String)
+2019-10-23 09:53:51.282  INFO 15568 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/meal/selectmealOrder],methods=[POST || GET],produces=[application/json;charset=utf-8]}" onto public java.lang.String com.hnjca.wechat.controller.DingcController.selectmealOrder(java.lang.String)
+2019-10-23 09:53:51.282  INFO 15568 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/meal/selectUserInfo],methods=[POST || GET],produces=[application/json;charset=utf-8]}" onto public java.lang.String com.hnjca.wechat.controller.DingcController.selectUserInfo(java.lang.String)
+2019-10-23 09:53:51.282  INFO 15568 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/meal/selectMenuInfo],methods=[POST || GET],produces=[application/json;charset=utf-8]}" onto public java.lang.String com.hnjca.wechat.controller.DingcController.selectMenuInfo(java.lang.String)
+2019-10-23 09:53:51.283  INFO 15568 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/meal/selectmealInfo],methods=[POST || GET],produces=[application/json;charset=utf-8]}" onto public java.util.Map<java.lang.String, java.lang.String> com.hnjca.wechat.controller.DingcController.selectmealInfo(java.lang.String)
+2019-10-23 09:53:51.283  INFO 15568 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/meal/selectmealTongji],methods=[POST || GET],produces=[application/json;charset=utf-8]}" onto public java.lang.String com.hnjca.wechat.controller.DingcController.selectmealTongji(java.lang.String)
+2019-10-23 09:53:51.283  INFO 15568 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/meal/selectmeald],methods=[POST || GET],produces=[application/json;charset=utf-8]}" onto public java.lang.String com.hnjca.wechat.controller.DingcController.selectmealOrderTongji(java.lang.String)
+2019-10-23 09:53:51.286  INFO 15568 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/hnjca/index],methods=[GET],produces=[application/json;charset=utf-8]}" onto public void com.hnjca.wechat.controller.HnjcaController.get(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.io.UnsupportedEncodingException
+2019-10-23 09:53:51.286  INFO 15568 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/hnjca/auth],methods=[GET],produces=[application/json;charset=utf-8]}" onto public void com.hnjca.wechat.controller.HnjcaController.auth(java.lang.String,java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.io.IOException
+2019-10-23 09:53:51.286  INFO 15568 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/hnjca/index],methods=[POST],produces=[application/json;charset=utf-8]}" onto public void com.hnjca.wechat.controller.HnjcaController.post(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.io.IOException,org.dom4j.DocumentException
+2019-10-23 09:53:51.287  INFO 15568 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/msgTuiC],methods=[GET],produces=[application/json;charset=utf-8]}" onto public com.hnjca.wechat.vo.ResponseInfo com.hnjca.wechat.controller.PushTemplateMsgController.pushMsgTuiC(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)
+2019-10-23 09:53:51.288  INFO 15568 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/wx/validateBind],methods=[POST || GET],produces=[application/json;charset=utf-8]}" onto public java.lang.String com.hnjca.wechat.controller.WeixinController.validateBind(java.lang.String)
+2019-10-23 09:53:51.289  INFO 15568 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/wx/banding],methods=[POST || GET],produces=[application/json;charset=utf-8]}" onto public java.lang.String com.hnjca.wechat.controller.WeixinController.binding(java.lang.String,java.lang.String,java.lang.String)
+2019-10-23 09:53:51.290  INFO 15568 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-10-23 09:53:51.291  INFO 15568 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-10-23 09:53:51.325  INFO 15568 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-10-23 09:53:51.325  INFO 15568 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-10-23 09:53:51.364  INFO 15568 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-10-23 09:53:51.391  INFO 15568 --- [main] oConfiguration$WelcomePageHandlerMapping : Adding welcome page: ServletContext resource [/index.html]
+2019-10-23 09:53:51.672  INFO 15568 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2019-10-23 09:53:51.733  INFO 15568 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2019-10-23 09:53:51.737  INFO 15568 --- [main] com.hnjca.wechat.DingCApplication        : Started DingCApplication in 3.466 seconds (JVM running for 4.006)
+2019-10-23 09:53:54.166  INFO 15568 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2019-10-23 09:53:54.166  INFO 15568 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2019-10-23 09:53:54.195  INFO 15568 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 28 ms
+2019-10-23 10:01:23.803  INFO 15568 --- [Thread-3] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@50313382: startup date [Wed Oct 23 09:53:48 CST 2019]; root of context hierarchy
+2019-10-23 10:01:23.806  INFO 15568 --- [Thread-3] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2019-10-23 10:14:17.751  INFO 16204 --- [main] com.hnjca.wechat.DingCApplication        : Starting DingCApplication on admin-PC with PID 16204 (F:\Ellison\wx-dingc\target\classes started by admin in F:\Ellison\wx-dingc)
+2019-10-23 10:14:17.766  INFO 16204 --- [main] com.hnjca.wechat.DingCApplication        : No active profile set, falling back to default profiles: default
+2019-10-23 10:14:17.923  INFO 16204 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@50313382: startup date [Wed Oct 23 10:14:17 CST 2019]; root of context hierarchy
+2019-10-23 10:14:20.631  INFO 16204 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2019-10-23 10:14:20.644  INFO 16204 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-10-23 10:14:20.645  INFO 16204 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.23
+2019-10-23 10:14:20.767  INFO 16204 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring embedded WebApplicationContext
+2019-10-23 10:14:20.767  INFO 16204 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2846 ms
+2019-10-23 10:14:20.920  INFO 16204 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2019-10-23 10:14:20.927  INFO 16204 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-10-23 10:14:20.928  INFO 16204 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-10-23 10:14:20.928  INFO 16204 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2019-10-23 10:14:20.928  INFO 16204 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2019-10-23 10:14:21.420  INFO 16204 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@50313382: startup date [Wed Oct 23 10:14:17 CST 2019]; root of context hierarchy
+2019-10-23 10:14:21.497  INFO 16204 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/meal/selectmeald],methods=[POST || GET],produces=[application/json;charset=utf-8]}" onto public java.lang.String com.hnjca.wechat.controller.DingcController.selectmealOrderTongji(java.lang.String)
+2019-10-23 10:14:21.498  INFO 16204 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/meal/mealOrder],methods=[POST || GET],produces=[application/json;charset=utf-8]}" onto public java.lang.String com.hnjca.wechat.controller.DingcController.mealOrder(java.lang.String)
+2019-10-23 10:14:21.498  INFO 16204 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/meal/tuiOrder],methods=[POST || GET],produces=[application/json;charset=utf-8]}" onto public java.lang.String com.hnjca.wechat.controller.DingcController.tuiOrder(java.lang.String)
+2019-10-23 10:14:21.499  INFO 16204 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/meal/selectmealOrder],methods=[POST || GET],produces=[application/json;charset=utf-8]}" onto public java.lang.String com.hnjca.wechat.controller.DingcController.selectmealOrder(java.lang.String)
+2019-10-23 10:14:21.499  INFO 16204 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/meal/selectUserInfo],methods=[POST || GET],produces=[application/json;charset=utf-8]}" onto public java.lang.String com.hnjca.wechat.controller.DingcController.selectUserInfo(java.lang.String)
+2019-10-23 10:14:21.499  INFO 16204 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/meal/selectMenuInfo],methods=[POST || GET],produces=[application/json;charset=utf-8]}" onto public java.lang.String com.hnjca.wechat.controller.DingcController.selectMenuInfo(java.lang.String)
+2019-10-23 10:14:21.499  INFO 16204 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/meal/selectmealInfo],methods=[POST || GET],produces=[application/json;charset=utf-8]}" onto public java.util.Map<java.lang.String, java.lang.String> com.hnjca.wechat.controller.DingcController.selectmealInfo(java.lang.String)
+2019-10-23 10:14:21.499  INFO 16204 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/meal/selectmealTongji],methods=[POST || GET],produces=[application/json;charset=utf-8]}" onto public java.lang.String com.hnjca.wechat.controller.DingcController.selectmealTongji(java.lang.String)
+2019-10-23 10:14:21.502  INFO 16204 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/hnjca/index],methods=[GET],produces=[application/json;charset=utf-8]}" onto public void com.hnjca.wechat.controller.HnjcaController.get(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.io.UnsupportedEncodingException
+2019-10-23 10:14:21.503  INFO 16204 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/hnjca/index],methods=[POST],produces=[application/json;charset=utf-8]}" onto public void com.hnjca.wechat.controller.HnjcaController.post(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.io.IOException,org.dom4j.DocumentException
+2019-10-23 10:14:21.503  INFO 16204 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/hnjca/auth],methods=[GET],produces=[application/json;charset=utf-8]}" onto public void com.hnjca.wechat.controller.HnjcaController.auth(java.lang.String,java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.io.IOException
+2019-10-23 10:14:21.504  INFO 16204 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/msgTuiC],methods=[GET],produces=[application/json;charset=utf-8]}" onto public com.hnjca.wechat.vo.ResponseInfo com.hnjca.wechat.controller.PushTemplateMsgController.pushMsgTuiC(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)
+2019-10-23 10:14:21.505  INFO 16204 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/wx/validateBind],methods=[POST || GET],produces=[application/json;charset=utf-8]}" onto public java.lang.String com.hnjca.wechat.controller.WeixinController.validateBind(java.lang.String)
+2019-10-23 10:14:21.506  INFO 16204 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/wx/banding],methods=[POST || GET],produces=[application/json;charset=utf-8]}" onto public java.lang.String com.hnjca.wechat.controller.WeixinController.binding(java.lang.String,java.lang.String,java.lang.String)
+2019-10-23 10:14:21.507  INFO 16204 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-10-23 10:14:21.508  INFO 16204 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-10-23 10:14:21.543  INFO 16204 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-10-23 10:14:21.543  INFO 16204 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-10-23 10:14:21.580  INFO 16204 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-10-23 10:14:21.604  INFO 16204 --- [main] oConfiguration$WelcomePageHandlerMapping : Adding welcome page: ServletContext resource [/index.html]
+2019-10-23 10:14:21.843  INFO 16204 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2019-10-23 10:14:21.899 ERROR 16204 --- [main] o.a.coyote.http11.Http11NioProtocol      : Failed to start end point associated with ProtocolHandler ["http-nio-8080"]
+
+java.net.BindException: Address already in use: bind
+	at sun.nio.ch.Net.bind0(Native Method) ~[na:1.8.0_131]
+	at sun.nio.ch.Net.bind(Net.java:433) ~[na:1.8.0_131]
+	at sun.nio.ch.Net.bind(Net.java:425) ~[na:1.8.0_131]
+	at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:223) ~[na:1.8.0_131]
+	at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:74) ~[na:1.8.0_131]
+	at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:210) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.tomcat.util.net.AbstractEndpoint.start(AbstractEndpoint.java:990) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.coyote.AbstractProtocol.start(AbstractProtocol.java:635) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:1022) [tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150) [tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.catalina.core.StandardService.addConnector(StandardService.java:225) [tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer.addPreviouslyRemovedConnectors(TomcatEmbeddedServletContainer.java:250) [spring-boot-1.5.9.RELEASE.jar:1.5.9.RELEASE]
+	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer.start(TomcatEmbeddedServletContainer.java:193) [spring-boot-1.5.9.RELEASE.jar:1.5.9.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.startEmbeddedServletContainer(EmbeddedWebApplicationContext.java:297) [spring-boot-1.5.9.RELEASE.jar:1.5.9.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.finishRefresh(EmbeddedWebApplicationContext.java:145) [spring-boot-1.5.9.RELEASE.jar:1.5.9.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:546) [spring-context-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122) [spring-boot-1.5.9.RELEASE.jar:1.5.9.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:693) [spring-boot-1.5.9.RELEASE.jar:1.5.9.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:360) [spring-boot-1.5.9.RELEASE.jar:1.5.9.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303) [spring-boot-1.5.9.RELEASE.jar:1.5.9.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1118) [spring-boot-1.5.9.RELEASE.jar:1.5.9.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1107) [spring-boot-1.5.9.RELEASE.jar:1.5.9.RELEASE]
+	at com.hnjca.wechat.DingCApplication.main(DingCApplication.java:18) [classes/:na]
+
+2019-10-23 10:14:21.900 ERROR 16204 --- [main] o.apache.catalina.core.StandardService   : Failed to start connector [Connector[HTTP/1.1-8080]]
+
+org.apache.catalina.LifecycleException: Failed to start component [Connector[HTTP/1.1-8080]]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:167) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.catalina.core.StandardService.addConnector(StandardService.java:225) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer.addPreviouslyRemovedConnectors(TomcatEmbeddedServletContainer.java:250) [spring-boot-1.5.9.RELEASE.jar:1.5.9.RELEASE]
+	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer.start(TomcatEmbeddedServletContainer.java:193) [spring-boot-1.5.9.RELEASE.jar:1.5.9.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.startEmbeddedServletContainer(EmbeddedWebApplicationContext.java:297) [spring-boot-1.5.9.RELEASE.jar:1.5.9.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.finishRefresh(EmbeddedWebApplicationContext.java:145) [spring-boot-1.5.9.RELEASE.jar:1.5.9.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:546) [spring-context-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122) [spring-boot-1.5.9.RELEASE.jar:1.5.9.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:693) [spring-boot-1.5.9.RELEASE.jar:1.5.9.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:360) [spring-boot-1.5.9.RELEASE.jar:1.5.9.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303) [spring-boot-1.5.9.RELEASE.jar:1.5.9.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1118) [spring-boot-1.5.9.RELEASE.jar:1.5.9.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1107) [spring-boot-1.5.9.RELEASE.jar:1.5.9.RELEASE]
+	at com.hnjca.wechat.DingCApplication.main(DingCApplication.java:18) [classes/:na]
+Caused by: org.apache.catalina.LifecycleException: service.getName(): "Tomcat";  Protocol handler start failed
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:1031) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	... 13 common frames omitted
+Caused by: java.net.BindException: Address already in use: bind
+	at sun.nio.ch.Net.bind0(Native Method) ~[na:1.8.0_131]
+	at sun.nio.ch.Net.bind(Net.java:433) ~[na:1.8.0_131]
+	at sun.nio.ch.Net.bind(Net.java:425) ~[na:1.8.0_131]
+	at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:223) ~[na:1.8.0_131]
+	at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:74) ~[na:1.8.0_131]
+	at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:210) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.tomcat.util.net.AbstractEndpoint.start(AbstractEndpoint.java:990) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.coyote.AbstractProtocol.start(AbstractProtocol.java:635) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:1022) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	... 14 common frames omitted
+
+2019-10-23 10:14:21.909  INFO 16204 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2019-10-23 10:14:21.919  INFO 16204 --- [main] utoConfigurationReportLoggingInitializer : 
+
+Error starting ApplicationContext. To display the auto-configuration report re-run your application with 'debug' enabled.
+2019-10-23 10:14:21.922 ERROR 16204 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The Tomcat connector configured to listen on port 8080 failed to start. The port may already be in use or the connector may be misconfigured.
+
+Action:
+
+Verify the connector's configuration, identify and stop any process that's listening on port 8080, or configure this application to listen on another port.
+
+2019-10-23 10:14:21.923  INFO 16204 --- [main] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@50313382: startup date [Wed Oct 23 10:14:17 CST 2019]; root of context hierarchy
+2019-10-23 10:14:21.924  INFO 16204 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2019-10-23 10:14:32.608  INFO 14572 --- [main] com.hnjca.wechat.DingCApplication        : Starting DingCApplication on admin-PC with PID 14572 (F:\Ellison\wx-dingc\target\classes started by admin in F:\Ellison\wx-dingc)
+2019-10-23 10:14:32.644  INFO 14572 --- [main] com.hnjca.wechat.DingCApplication        : No active profile set, falling back to default profiles: default
+2019-10-23 10:14:32.732  INFO 14572 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@50313382: startup date [Wed Oct 23 10:14:32 CST 2019]; root of context hierarchy
+2019-10-23 10:14:34.145  INFO 14572 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2019-10-23 10:14:34.155  INFO 14572 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-10-23 10:14:34.156  INFO 14572 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.23
+2019-10-23 10:14:34.253  INFO 14572 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring embedded WebApplicationContext
+2019-10-23 10:14:34.253  INFO 14572 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1523 ms
+2019-10-23 10:14:34.370  INFO 14572 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2019-10-23 10:14:34.375  INFO 14572 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-10-23 10:14:34.375  INFO 14572 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-10-23 10:14:34.376  INFO 14572 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2019-10-23 10:14:34.376  INFO 14572 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2019-10-23 10:14:34.703  INFO 14572 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@50313382: startup date [Wed Oct 23 10:14:32 CST 2019]; root of context hierarchy
+2019-10-23 10:14:34.767  INFO 14572 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/meal/mealOrder],methods=[POST || GET],produces=[application/json;charset=utf-8]}" onto public java.lang.String com.hnjca.wechat.controller.DingcController.mealOrder(java.lang.String)
+2019-10-23 10:14:34.769  INFO 14572 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/meal/tuiOrder],methods=[POST || GET],produces=[application/json;charset=utf-8]}" onto public java.lang.String com.hnjca.wechat.controller.DingcController.tuiOrder(java.lang.String)
+2019-10-23 10:14:34.769  INFO 14572 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/meal/selectmealOrder],methods=[POST || GET],produces=[application/json;charset=utf-8]}" onto public java.lang.String com.hnjca.wechat.controller.DingcController.selectmealOrder(java.lang.String)
+2019-10-23 10:14:34.769  INFO 14572 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/meal/selectUserInfo],methods=[POST || GET],produces=[application/json;charset=utf-8]}" onto public java.lang.String com.hnjca.wechat.controller.DingcController.selectUserInfo(java.lang.String)
+2019-10-23 10:14:34.769  INFO 14572 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/meal/selectMenuInfo],methods=[POST || GET],produces=[application/json;charset=utf-8]}" onto public java.lang.String com.hnjca.wechat.controller.DingcController.selectMenuInfo(java.lang.String)
+2019-10-23 10:14:34.769  INFO 14572 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/meal/selectmealInfo],methods=[POST || GET],produces=[application/json;charset=utf-8]}" onto public java.util.Map<java.lang.String, java.lang.String> com.hnjca.wechat.controller.DingcController.selectmealInfo(java.lang.String)
+2019-10-23 10:14:34.770  INFO 14572 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/meal/selectmealTongji],methods=[POST || GET],produces=[application/json;charset=utf-8]}" onto public java.lang.String com.hnjca.wechat.controller.DingcController.selectmealTongji(java.lang.String)
+2019-10-23 10:14:34.770  INFO 14572 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/meal/selectmeald],methods=[POST || GET],produces=[application/json;charset=utf-8]}" onto public java.lang.String com.hnjca.wechat.controller.DingcController.selectmealOrderTongji(java.lang.String)
+2019-10-23 10:14:34.772  INFO 14572 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/hnjca/index],methods=[GET],produces=[application/json;charset=utf-8]}" onto public void com.hnjca.wechat.controller.HnjcaController.get(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.io.UnsupportedEncodingException
+2019-10-23 10:14:34.772  INFO 14572 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/hnjca/index],methods=[POST],produces=[application/json;charset=utf-8]}" onto public void com.hnjca.wechat.controller.HnjcaController.post(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.io.IOException,org.dom4j.DocumentException
+2019-10-23 10:14:34.773  INFO 14572 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/hnjca/auth],methods=[GET],produces=[application/json;charset=utf-8]}" onto public void com.hnjca.wechat.controller.HnjcaController.auth(java.lang.String,java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.io.IOException
+2019-10-23 10:14:34.773  INFO 14572 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/msgTuiC],methods=[GET],produces=[application/json;charset=utf-8]}" onto public com.hnjca.wechat.vo.ResponseInfo com.hnjca.wechat.controller.PushTemplateMsgController.pushMsgTuiC(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)
+2019-10-23 10:14:34.774  INFO 14572 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/wx/validateBind],methods=[POST || GET],produces=[application/json;charset=utf-8]}" onto public java.lang.String com.hnjca.wechat.controller.WeixinController.validateBind(java.lang.String)
+2019-10-23 10:14:34.774  INFO 14572 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/wx/banding],methods=[POST || GET],produces=[application/json;charset=utf-8]}" onto public java.lang.String com.hnjca.wechat.controller.WeixinController.binding(java.lang.String,java.lang.String,java.lang.String)
+2019-10-23 10:14:34.776  INFO 14572 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-10-23 10:14:34.776  INFO 14572 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-10-23 10:14:34.808  INFO 14572 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-10-23 10:14:34.808  INFO 14572 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-10-23 10:14:34.848  INFO 14572 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-10-23 10:14:34.870  INFO 14572 --- [main] oConfiguration$WelcomePageHandlerMapping : Adding welcome page: ServletContext resource [/index.html]
+2019-10-23 10:14:35.095  INFO 14572 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2019-10-23 10:14:35.130 ERROR 14572 --- [main] o.a.coyote.http11.Http11NioProtocol      : Failed to start end point associated with ProtocolHandler ["http-nio-8080"]
+
+java.net.BindException: Address already in use: bind
+	at sun.nio.ch.Net.bind0(Native Method) ~[na:1.8.0_131]
+	at sun.nio.ch.Net.bind(Net.java:433) ~[na:1.8.0_131]
+	at sun.nio.ch.Net.bind(Net.java:425) ~[na:1.8.0_131]
+	at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:223) ~[na:1.8.0_131]
+	at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:74) ~[na:1.8.0_131]
+	at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:210) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.tomcat.util.net.AbstractEndpoint.start(AbstractEndpoint.java:990) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.coyote.AbstractProtocol.start(AbstractProtocol.java:635) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:1022) [tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150) [tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.catalina.core.StandardService.addConnector(StandardService.java:225) [tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer.addPreviouslyRemovedConnectors(TomcatEmbeddedServletContainer.java:250) [spring-boot-1.5.9.RELEASE.jar:1.5.9.RELEASE]
+	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer.start(TomcatEmbeddedServletContainer.java:193) [spring-boot-1.5.9.RELEASE.jar:1.5.9.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.startEmbeddedServletContainer(EmbeddedWebApplicationContext.java:297) [spring-boot-1.5.9.RELEASE.jar:1.5.9.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.finishRefresh(EmbeddedWebApplicationContext.java:145) [spring-boot-1.5.9.RELEASE.jar:1.5.9.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:546) [spring-context-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122) [spring-boot-1.5.9.RELEASE.jar:1.5.9.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:693) [spring-boot-1.5.9.RELEASE.jar:1.5.9.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:360) [spring-boot-1.5.9.RELEASE.jar:1.5.9.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303) [spring-boot-1.5.9.RELEASE.jar:1.5.9.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1118) [spring-boot-1.5.9.RELEASE.jar:1.5.9.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1107) [spring-boot-1.5.9.RELEASE.jar:1.5.9.RELEASE]
+	at com.hnjca.wechat.DingCApplication.main(DingCApplication.java:18) [classes/:na]
+
+2019-10-23 10:14:35.131 ERROR 14572 --- [main] o.apache.catalina.core.StandardService   : Failed to start connector [Connector[HTTP/1.1-8080]]
+
+org.apache.catalina.LifecycleException: Failed to start component [Connector[HTTP/1.1-8080]]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:167) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.catalina.core.StandardService.addConnector(StandardService.java:225) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer.addPreviouslyRemovedConnectors(TomcatEmbeddedServletContainer.java:250) [spring-boot-1.5.9.RELEASE.jar:1.5.9.RELEASE]
+	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer.start(TomcatEmbeddedServletContainer.java:193) [spring-boot-1.5.9.RELEASE.jar:1.5.9.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.startEmbeddedServletContainer(EmbeddedWebApplicationContext.java:297) [spring-boot-1.5.9.RELEASE.jar:1.5.9.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.finishRefresh(EmbeddedWebApplicationContext.java:145) [spring-boot-1.5.9.RELEASE.jar:1.5.9.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:546) [spring-context-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122) [spring-boot-1.5.9.RELEASE.jar:1.5.9.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:693) [spring-boot-1.5.9.RELEASE.jar:1.5.9.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:360) [spring-boot-1.5.9.RELEASE.jar:1.5.9.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303) [spring-boot-1.5.9.RELEASE.jar:1.5.9.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1118) [spring-boot-1.5.9.RELEASE.jar:1.5.9.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1107) [spring-boot-1.5.9.RELEASE.jar:1.5.9.RELEASE]
+	at com.hnjca.wechat.DingCApplication.main(DingCApplication.java:18) [classes/:na]
+Caused by: org.apache.catalina.LifecycleException: service.getName(): "Tomcat";  Protocol handler start failed
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:1031) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	... 13 common frames omitted
+Caused by: java.net.BindException: Address already in use: bind
+	at sun.nio.ch.Net.bind0(Native Method) ~[na:1.8.0_131]
+	at sun.nio.ch.Net.bind(Net.java:433) ~[na:1.8.0_131]
+	at sun.nio.ch.Net.bind(Net.java:425) ~[na:1.8.0_131]
+	at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:223) ~[na:1.8.0_131]
+	at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:74) ~[na:1.8.0_131]
+	at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:210) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.tomcat.util.net.AbstractEndpoint.start(AbstractEndpoint.java:990) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.coyote.AbstractProtocol.start(AbstractProtocol.java:635) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:1022) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	... 14 common frames omitted
+
+2019-10-23 10:14:35.138  INFO 14572 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2019-10-23 10:14:35.146  INFO 14572 --- [main] utoConfigurationReportLoggingInitializer : 
+
+Error starting ApplicationContext. To display the auto-configuration report re-run your application with 'debug' enabled.
+2019-10-23 10:14:35.151 ERROR 14572 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The Tomcat connector configured to listen on port 8080 failed to start. The port may already be in use or the connector may be misconfigured.
+
+Action:
+
+Verify the connector's configuration, identify and stop any process that's listening on port 8080, or configure this application to listen on another port.
+
+2019-10-23 10:14:35.152  INFO 14572 --- [main] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@50313382: startup date [Wed Oct 23 10:14:32 CST 2019]; root of context hierarchy
+2019-10-23 10:14:35.153  INFO 14572 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2019-10-23 10:14:55.094  INFO 8664 --- [main] com.hnjca.wechat.DingCApplication        : Starting DingCApplication on admin-PC with PID 8664 (F:\Ellison\wx-dingc\target\classes started by admin in F:\Ellison\wx-dingc)
+2019-10-23 10:14:55.096  INFO 8664 --- [main] com.hnjca.wechat.DingCApplication        : No active profile set, falling back to default profiles: default
+2019-10-23 10:14:55.215  INFO 8664 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@50313382: startup date [Wed Oct 23 10:14:55 CST 2019]; root of context hierarchy
+2019-10-23 10:14:56.571  INFO 8664 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2019-10-23 10:14:56.584  INFO 8664 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-10-23 10:14:56.585  INFO 8664 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.23
+2019-10-23 10:14:56.695  INFO 8664 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring embedded WebApplicationContext
+2019-10-23 10:14:56.695  INFO 8664 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1483 ms
+2019-10-23 10:14:56.809  INFO 8664 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2019-10-23 10:14:56.812  INFO 8664 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-10-23 10:14:56.814  INFO 8664 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-10-23 10:14:56.814  INFO 8664 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2019-10-23 10:14:56.814  INFO 8664 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2019-10-23 10:14:57.117  INFO 8664 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@50313382: startup date [Wed Oct 23 10:14:55 CST 2019]; root of context hierarchy
+2019-10-23 10:14:57.180  INFO 8664 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/meal/mealOrder],methods=[POST || GET],produces=[application/json;charset=utf-8]}" onto public java.lang.String com.hnjca.wechat.controller.DingcController.mealOrder(java.lang.String)
+2019-10-23 10:14:57.182  INFO 8664 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/meal/tuiOrder],methods=[POST || GET],produces=[application/json;charset=utf-8]}" onto public java.lang.String com.hnjca.wechat.controller.DingcController.tuiOrder(java.lang.String)
+2019-10-23 10:14:57.182  INFO 8664 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/meal/selectmealOrder],methods=[POST || GET],produces=[application/json;charset=utf-8]}" onto public java.lang.String com.hnjca.wechat.controller.DingcController.selectmealOrder(java.lang.String)
+2019-10-23 10:14:57.183  INFO 8664 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/meal/selectUserInfo],methods=[POST || GET],produces=[application/json;charset=utf-8]}" onto public java.lang.String com.hnjca.wechat.controller.DingcController.selectUserInfo(java.lang.String)
+2019-10-23 10:14:57.183  INFO 8664 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/meal/selectMenuInfo],methods=[POST || GET],produces=[application/json;charset=utf-8]}" onto public java.lang.String com.hnjca.wechat.controller.DingcController.selectMenuInfo(java.lang.String)
+2019-10-23 10:14:57.183  INFO 8664 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/meal/selectmealInfo],methods=[POST || GET],produces=[application/json;charset=utf-8]}" onto public java.util.Map<java.lang.String, java.lang.String> com.hnjca.wechat.controller.DingcController.selectmealInfo(java.lang.String)
+2019-10-23 10:14:57.183  INFO 8664 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/meal/selectmealTongji],methods=[POST || GET],produces=[application/json;charset=utf-8]}" onto public java.lang.String com.hnjca.wechat.controller.DingcController.selectmealTongji(java.lang.String)
+2019-10-23 10:14:57.184  INFO 8664 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/meal/selectmeald],methods=[POST || GET],produces=[application/json;charset=utf-8]}" onto public java.lang.String com.hnjca.wechat.controller.DingcController.selectmealOrderTongji(java.lang.String)
+2019-10-23 10:14:57.186  INFO 8664 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/hnjca/index],methods=[GET],produces=[application/json;charset=utf-8]}" onto public void com.hnjca.wechat.controller.HnjcaController.get(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.io.UnsupportedEncodingException
+2019-10-23 10:14:57.187  INFO 8664 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/hnjca/index],methods=[POST],produces=[application/json;charset=utf-8]}" onto public void com.hnjca.wechat.controller.HnjcaController.post(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.io.IOException,org.dom4j.DocumentException
+2019-10-23 10:14:57.187  INFO 8664 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/hnjca/auth],methods=[GET],produces=[application/json;charset=utf-8]}" onto public void com.hnjca.wechat.controller.HnjcaController.auth(java.lang.String,java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.io.IOException
+2019-10-23 10:14:57.188  INFO 8664 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/msgTuiC],methods=[GET],produces=[application/json;charset=utf-8]}" onto public com.hnjca.wechat.vo.ResponseInfo com.hnjca.wechat.controller.PushTemplateMsgController.pushMsgTuiC(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)
+2019-10-23 10:14:57.189  INFO 8664 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/wx/validateBind],methods=[POST || GET],produces=[application/json;charset=utf-8]}" onto public java.lang.String com.hnjca.wechat.controller.WeixinController.validateBind(java.lang.String)
+2019-10-23 10:14:57.189  INFO 8664 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/wx/banding],methods=[POST || GET],produces=[application/json;charset=utf-8]}" onto public java.lang.String com.hnjca.wechat.controller.WeixinController.binding(java.lang.String,java.lang.String,java.lang.String)
+2019-10-23 10:14:57.190  INFO 8664 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-10-23 10:14:57.191  INFO 8664 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-10-23 10:14:57.216  INFO 8664 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-10-23 10:14:57.216  INFO 8664 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-10-23 10:14:57.250  INFO 8664 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-10-23 10:14:57.271  INFO 8664 --- [main] oConfiguration$WelcomePageHandlerMapping : Adding welcome page: ServletContext resource [/index.html]
+2019-10-23 10:14:57.497  INFO 8664 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2019-10-23 10:14:57.564  INFO 8664 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2019-10-23 10:14:57.567  INFO 8664 --- [main] com.hnjca.wechat.DingCApplication        : Started DingCApplication in 2.828 seconds (JVM running for 3.332)
+2019-10-23 10:15:02.470  INFO 8664 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2019-10-23 10:15:02.471  INFO 8664 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2019-10-23 10:15:02.497  INFO 8664 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 26 ms
+2019-10-23 10:18:34.116  INFO 8664 --- [Thread-3] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@50313382: startup date [Wed Oct 23 10:14:55 CST 2019]; root of context hierarchy
+2019-10-23 10:18:34.118  INFO 8664 --- [Thread-3] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2019-10-23 10:18:37.835  INFO 10252 --- [main] com.hnjca.wechat.DingCApplication        : Starting DingCApplication on admin-PC with PID 10252 (F:\Ellison\wx-dingc\target\classes started by admin in F:\Ellison\wx-dingc)
+2019-10-23 10:18:37.839  INFO 10252 --- [main] com.hnjca.wechat.DingCApplication        : No active profile set, falling back to default profiles: default
+2019-10-23 10:18:37.939  INFO 10252 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@50313382: startup date [Wed Oct 23 10:18:37 CST 2019]; root of context hierarchy
+2019-10-23 10:18:39.305  INFO 10252 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2019-10-23 10:18:39.321  INFO 10252 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-10-23 10:18:39.323  INFO 10252 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.23
+2019-10-23 10:18:39.475  INFO 10252 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring embedded WebApplicationContext
+2019-10-23 10:18:39.475  INFO 10252 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1538 ms
+2019-10-23 10:18:39.611  INFO 10252 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2019-10-23 10:18:39.616  INFO 10252 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-10-23 10:18:39.616  INFO 10252 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-10-23 10:18:39.616  INFO 10252 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2019-10-23 10:18:39.617  INFO 10252 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2019-10-23 10:18:39.956  INFO 10252 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@50313382: startup date [Wed Oct 23 10:18:37 CST 2019]; root of context hierarchy
+2019-10-23 10:18:40.023  INFO 10252 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/meal/selectmeald],methods=[POST || GET],produces=[application/json;charset=utf-8]}" onto public java.lang.String com.hnjca.wechat.controller.DingcController.selectmealOrderTongji(java.lang.String)
+2019-10-23 10:18:40.024  INFO 10252 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/meal/mealOrder],methods=[POST || GET],produces=[application/json;charset=utf-8]}" onto public java.lang.String com.hnjca.wechat.controller.DingcController.mealOrder(java.lang.String)
+2019-10-23 10:18:40.025  INFO 10252 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/meal/tuiOrder],methods=[POST || GET],produces=[application/json;charset=utf-8]}" onto public java.lang.String com.hnjca.wechat.controller.DingcController.tuiOrder(java.lang.String)
+2019-10-23 10:18:40.025  INFO 10252 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/meal/selectmealOrder],methods=[POST || GET],produces=[application/json;charset=utf-8]}" onto public java.lang.String com.hnjca.wechat.controller.DingcController.selectmealOrder(java.lang.String)
+2019-10-23 10:18:40.025  INFO 10252 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/meal/selectUserInfo],methods=[POST || GET],produces=[application/json;charset=utf-8]}" onto public java.lang.String com.hnjca.wechat.controller.DingcController.selectUserInfo(java.lang.String)
+2019-10-23 10:18:40.025  INFO 10252 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/meal/selectMenuInfo],methods=[POST || GET],produces=[application/json;charset=utf-8]}" onto public java.lang.String com.hnjca.wechat.controller.DingcController.selectMenuInfo(java.lang.String)
+2019-10-23 10:18:40.025  INFO 10252 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/meal/selectmealInfo],methods=[POST || GET],produces=[application/json;charset=utf-8]}" onto public java.util.Map<java.lang.String, java.lang.String> com.hnjca.wechat.controller.DingcController.selectmealInfo(java.lang.String)
+2019-10-23 10:18:40.026  INFO 10252 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/meal/selectmealTongji],methods=[POST || GET],produces=[application/json;charset=utf-8]}" onto public java.lang.String com.hnjca.wechat.controller.DingcController.selectmealTongji(java.lang.String)
+2019-10-23 10:18:40.028  INFO 10252 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/hnjca/index],methods=[GET],produces=[application/json;charset=utf-8]}" onto public void com.hnjca.wechat.controller.HnjcaController.get(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.io.UnsupportedEncodingException
+2019-10-23 10:18:40.028  INFO 10252 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/hnjca/index],methods=[POST],produces=[application/json;charset=utf-8]}" onto public void com.hnjca.wechat.controller.HnjcaController.post(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.io.IOException,org.dom4j.DocumentException
+2019-10-23 10:18:40.028  INFO 10252 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/hnjca/auth],methods=[GET],produces=[application/json;charset=utf-8]}" onto public void com.hnjca.wechat.controller.HnjcaController.auth(java.lang.String,java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.io.IOException
+2019-10-23 10:18:40.029  INFO 10252 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/msgTuiC],methods=[GET],produces=[application/json;charset=utf-8]}" onto public com.hnjca.wechat.vo.ResponseInfo com.hnjca.wechat.controller.PushTemplateMsgController.pushMsgTuiC(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)
+2019-10-23 10:18:40.030  INFO 10252 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/wx/validateBind],methods=[POST || GET],produces=[application/json;charset=utf-8]}" onto public java.lang.String com.hnjca.wechat.controller.WeixinController.validateBind(java.lang.String)
+2019-10-23 10:18:40.030  INFO 10252 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/wx/banding],methods=[POST || GET],produces=[application/json;charset=utf-8]}" onto public java.lang.String com.hnjca.wechat.controller.WeixinController.binding(java.lang.String,java.lang.String,java.lang.String)
+2019-10-23 10:18:40.032  INFO 10252 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-10-23 10:18:40.032  INFO 10252 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-10-23 10:18:40.066  INFO 10252 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-10-23 10:18:40.066  INFO 10252 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-10-23 10:18:40.103  INFO 10252 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-10-23 10:18:40.126  INFO 10252 --- [main] oConfiguration$WelcomePageHandlerMapping : Adding welcome page: ServletContext resource [/index.html]
+2019-10-23 10:18:40.329  INFO 10252 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2019-10-23 10:18:40.382  INFO 10252 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2019-10-23 10:18:40.386  INFO 10252 --- [main] com.hnjca.wechat.DingCApplication        : Started DingCApplication in 2.976 seconds (JVM running for 3.618)
+2019-10-23 10:18:45.723  INFO 10252 --- [Thread-3] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@50313382: startup date [Wed Oct 23 10:18:37 CST 2019]; root of context hierarchy
+2019-10-23 10:18:45.724  INFO 10252 --- [Thread-3] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2019-10-23 10:18:48.235  INFO 15392 --- [main] com.hnjca.wechat.DingCApplication        : Starting DingCApplication on admin-PC with PID 15392 (F:\Ellison\wx-dingc\target\classes started by admin in F:\Ellison\wx-dingc)
+2019-10-23 10:18:48.238  INFO 15392 --- [main] com.hnjca.wechat.DingCApplication        : No active profile set, falling back to default profiles: default
+2019-10-23 10:18:48.403  INFO 15392 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@50313382: startup date [Wed Oct 23 10:18:48 CST 2019]; root of context hierarchy
+2019-10-23 10:18:49.792  INFO 15392 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2019-10-23 10:18:49.802  INFO 15392 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-10-23 10:18:49.803  INFO 15392 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.23
+2019-10-23 10:18:49.912  INFO 15392 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring embedded WebApplicationContext
+2019-10-23 10:18:49.913  INFO 15392 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1513 ms
+2019-10-23 10:18:50.022  INFO 15392 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2019-10-23 10:18:50.027  INFO 15392 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-10-23 10:18:50.027  INFO 15392 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-10-23 10:18:50.027  INFO 15392 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2019-10-23 10:18:50.027  INFO 15392 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2019-10-23 10:18:50.311  INFO 15392 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@50313382: startup date [Wed Oct 23 10:18:48 CST 2019]; root of context hierarchy
+2019-10-23 10:18:50.369  INFO 15392 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/meal/selectmeald],methods=[POST || GET],produces=[application/json;charset=utf-8]}" onto public java.lang.String com.hnjca.wechat.controller.DingcController.selectmealOrderTongji(java.lang.String)
+2019-10-23 10:18:50.370  INFO 15392 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/meal/mealOrder],methods=[POST || GET],produces=[application/json;charset=utf-8]}" onto public java.lang.String com.hnjca.wechat.controller.DingcController.mealOrder(java.lang.String)
+2019-10-23 10:18:50.371  INFO 15392 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/meal/tuiOrder],methods=[POST || GET],produces=[application/json;charset=utf-8]}" onto public java.lang.String com.hnjca.wechat.controller.DingcController.tuiOrder(java.lang.String)
+2019-10-23 10:18:50.371  INFO 15392 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/meal/selectmealOrder],methods=[POST || GET],produces=[application/json;charset=utf-8]}" onto public java.lang.String com.hnjca.wechat.controller.DingcController.selectmealOrder(java.lang.String)
+2019-10-23 10:18:50.371  INFO 15392 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/meal/selectUserInfo],methods=[POST || GET],produces=[application/json;charset=utf-8]}" onto public java.lang.String com.hnjca.wechat.controller.DingcController.selectUserInfo(java.lang.String)
+2019-10-23 10:18:50.371  INFO 15392 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/meal/selectMenuInfo],methods=[POST || GET],produces=[application/json;charset=utf-8]}" onto public java.lang.String com.hnjca.wechat.controller.DingcController.selectMenuInfo(java.lang.String)
+2019-10-23 10:18:50.372  INFO 15392 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/meal/selectmealInfo],methods=[POST || GET],produces=[application/json;charset=utf-8]}" onto public java.util.Map<java.lang.String, java.lang.String> com.hnjca.wechat.controller.DingcController.selectmealInfo(java.lang.String)
+2019-10-23 10:18:50.372  INFO 15392 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/meal/selectmealTongji],methods=[POST || GET],produces=[application/json;charset=utf-8]}" onto public java.lang.String com.hnjca.wechat.controller.DingcController.selectmealTongji(java.lang.String)
+2019-10-23 10:18:50.374  INFO 15392 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/hnjca/index],methods=[GET],produces=[application/json;charset=utf-8]}" onto public void com.hnjca.wechat.controller.HnjcaController.get(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.io.UnsupportedEncodingException
+2019-10-23 10:18:50.374  INFO 15392 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/hnjca/index],methods=[POST],produces=[application/json;charset=utf-8]}" onto public void com.hnjca.wechat.controller.HnjcaController.post(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.io.IOException,org.dom4j.DocumentException
+2019-10-23 10:18:50.375  INFO 15392 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/hnjca/auth],methods=[GET],produces=[application/json;charset=utf-8]}" onto public void com.hnjca.wechat.controller.HnjcaController.auth(java.lang.String,java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.io.IOException
+2019-10-23 10:18:50.375  INFO 15392 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/msgTuiC],methods=[GET],produces=[application/json;charset=utf-8]}" onto public com.hnjca.wechat.vo.ResponseInfo com.hnjca.wechat.controller.PushTemplateMsgController.pushMsgTuiC(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)
+2019-10-23 10:18:50.376  INFO 15392 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/wx/validateBind],methods=[POST || GET],produces=[application/json;charset=utf-8]}" onto public java.lang.String com.hnjca.wechat.controller.WeixinController.validateBind(java.lang.String)
+2019-10-23 10:18:50.376  INFO 15392 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/wx/banding],methods=[POST || GET],produces=[application/json;charset=utf-8]}" onto public java.lang.String com.hnjca.wechat.controller.WeixinController.binding(java.lang.String,java.lang.String,java.lang.String)
+2019-10-23 10:18:50.378  INFO 15392 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-10-23 10:18:50.378  INFO 15392 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-10-23 10:18:50.406  INFO 15392 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-10-23 10:18:50.406  INFO 15392 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-10-23 10:18:50.440  INFO 15392 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-10-23 10:18:50.462  INFO 15392 --- [main] oConfiguration$WelcomePageHandlerMapping : Adding welcome page: ServletContext resource [/index.html]
+2019-10-23 10:18:50.654  INFO 15392 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2019-10-23 10:18:50.709  INFO 15392 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2019-10-23 10:18:50.714  INFO 15392 --- [main] com.hnjca.wechat.DingCApplication        : Started DingCApplication in 2.947 seconds (JVM running for 3.474)
+2019-10-23 10:18:55.620  INFO 15392 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2019-10-23 10:18:55.621  INFO 15392 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2019-10-23 10:18:55.639  INFO 15392 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 18 ms
+2019-10-23 10:22:03.309  INFO 15392 --- [Thread-3] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@50313382: startup date [Wed Oct 23 10:18:48 CST 2019]; root of context hierarchy
+2019-10-23 10:22:03.310  INFO 15392 --- [Thread-3] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2019-10-23 10:22:07.177  INFO 15248 --- [main] com.hnjca.wechat.DingCApplication        : Starting DingCApplication on admin-PC with PID 15248 (F:\Ellison\wx-dingc\target\classes started by admin in F:\Ellison\wx-dingc)
+2019-10-23 10:22:07.181  INFO 15248 --- [main] com.hnjca.wechat.DingCApplication        : No active profile set, falling back to default profiles: default
+2019-10-23 10:22:07.273  INFO 15248 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@50313382: startup date [Wed Oct 23 10:22:07 CST 2019]; root of context hierarchy
+2019-10-23 10:22:09.059  INFO 15248 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2019-10-23 10:22:09.070  INFO 15248 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-10-23 10:22:09.071  INFO 15248 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.23
+2019-10-23 10:22:09.161  INFO 15248 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring embedded WebApplicationContext
+2019-10-23 10:22:09.161  INFO 15248 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1891 ms
+2019-10-23 10:22:09.281  INFO 15248 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2019-10-23 10:22:09.285  INFO 15248 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-10-23 10:22:09.286  INFO 15248 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-10-23 10:22:09.286  INFO 15248 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2019-10-23 10:22:09.286  INFO 15248 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2019-10-23 10:22:09.599  INFO 15248 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@50313382: startup date [Wed Oct 23 10:22:07 CST 2019]; root of context hierarchy
+2019-10-23 10:22:09.669  INFO 15248 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/meal/mealOrder],methods=[POST || GET],produces=[application/json;charset=utf-8]}" onto public java.lang.String com.hnjca.wechat.controller.DingcController.mealOrder(java.lang.String)
+2019-10-23 10:22:09.670  INFO 15248 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/meal/tuiOrder],methods=[POST || GET],produces=[application/json;charset=utf-8]}" onto public java.lang.String com.hnjca.wechat.controller.DingcController.tuiOrder(java.lang.String)
+2019-10-23 10:22:09.670  INFO 15248 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/meal/selectmealOrder],methods=[POST || GET],produces=[application/json;charset=utf-8]}" onto public java.lang.String com.hnjca.wechat.controller.DingcController.selectmealOrder(java.lang.String)
+2019-10-23 10:22:09.670  INFO 15248 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/meal/selectUserInfo],methods=[POST || GET],produces=[application/json;charset=utf-8]}" onto public java.lang.String com.hnjca.wechat.controller.DingcController.selectUserInfo(java.lang.String)
+2019-10-23 10:22:09.671  INFO 15248 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/meal/selectMenuInfo],methods=[POST || GET],produces=[application/json;charset=utf-8]}" onto public java.lang.String com.hnjca.wechat.controller.DingcController.selectMenuInfo(java.lang.String)
+2019-10-23 10:22:09.671  INFO 15248 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/meal/selectmealInfo],methods=[POST || GET],produces=[application/json;charset=utf-8]}" onto public java.util.Map<java.lang.String, java.lang.String> com.hnjca.wechat.controller.DingcController.selectmealInfo(java.lang.String)
+2019-10-23 10:22:09.671  INFO 15248 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/meal/selectmealTongji],methods=[POST || GET],produces=[application/json;charset=utf-8]}" onto public java.lang.String com.hnjca.wechat.controller.DingcController.selectmealTongji(java.lang.String)
+2019-10-23 10:22:09.672  INFO 15248 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/meal/selectmeald],methods=[POST || GET],produces=[application/json;charset=utf-8]}" onto public java.lang.String com.hnjca.wechat.controller.DingcController.selectmealOrderTongji(java.lang.String)
+2019-10-23 10:22:09.674  INFO 15248 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/hnjca/index],methods=[GET],produces=[application/json;charset=utf-8]}" onto public void com.hnjca.wechat.controller.HnjcaController.get(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.io.UnsupportedEncodingException
+2019-10-23 10:22:09.675  INFO 15248 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/hnjca/index],methods=[POST],produces=[application/json;charset=utf-8]}" onto public void com.hnjca.wechat.controller.HnjcaController.post(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.io.IOException,org.dom4j.DocumentException
+2019-10-23 10:22:09.675  INFO 15248 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/hnjca/auth],methods=[GET],produces=[application/json;charset=utf-8]}" onto public void com.hnjca.wechat.controller.HnjcaController.auth(java.lang.String,java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.io.IOException
+2019-10-23 10:22:09.675  INFO 15248 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/msgTuiC],methods=[GET],produces=[application/json;charset=utf-8]}" onto public com.hnjca.wechat.vo.ResponseInfo com.hnjca.wechat.controller.PushTemplateMsgController.pushMsgTuiC(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)
+2019-10-23 10:22:09.676  INFO 15248 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/wx/validateBind],methods=[POST || GET],produces=[application/json;charset=utf-8]}" onto public java.lang.String com.hnjca.wechat.controller.WeixinController.validateBind(java.lang.String)
+2019-10-23 10:22:09.677  INFO 15248 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/wx/banding],methods=[POST || GET],produces=[application/json;charset=utf-8]}" onto public java.lang.String com.hnjca.wechat.controller.WeixinController.binding(java.lang.String,java.lang.String,java.lang.String)
+2019-10-23 10:22:09.678  INFO 15248 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-10-23 10:22:09.679  INFO 15248 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-10-23 10:22:09.707  INFO 15248 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-10-23 10:22:09.707  INFO 15248 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-10-23 10:22:09.743  INFO 15248 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-10-23 10:22:09.766  INFO 15248 --- [main] oConfiguration$WelcomePageHandlerMapping : Adding welcome page: ServletContext resource [/index.html]
+2019-10-23 10:22:10.000  INFO 15248 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2019-10-23 10:22:10.052  INFO 15248 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2019-10-23 10:22:10.055  INFO 15248 --- [main] com.hnjca.wechat.DingCApplication        : Started DingCApplication in 3.286 seconds (JVM running for 3.813)
+2019-10-23 10:22:19.498  INFO 15248 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2019-10-23 10:22:19.498  INFO 15248 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2019-10-23 10:22:19.514  INFO 15248 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 16 ms
+2019-10-23 10:27:12.794  INFO 15248 --- [Thread-3] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@50313382: startup date [Wed Oct 23 10:22:07 CST 2019]; root of context hierarchy
+2019-10-23 10:27:12.797  INFO 15248 --- [Thread-3] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2019-10-23 10:27:16.984  INFO 15624 --- [main] com.hnjca.wechat.DingCApplication        : Starting DingCApplication on admin-PC with PID 15624 (F:\Ellison\wx-dingc\target\classes started by admin in F:\Ellison\wx-dingc)
+2019-10-23 10:27:16.988  INFO 15624 --- [main] com.hnjca.wechat.DingCApplication        : No active profile set, falling back to default profiles: default
+2019-10-23 10:27:17.104  INFO 15624 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@50313382: startup date [Wed Oct 23 10:27:17 CST 2019]; root of context hierarchy
+2019-10-23 10:27:18.585  INFO 15624 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2019-10-23 10:27:18.595  INFO 15624 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-10-23 10:27:18.596  INFO 15624 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.23
+2019-10-23 10:27:18.686  INFO 15624 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring embedded WebApplicationContext
+2019-10-23 10:27:18.686  INFO 15624 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1584 ms
+2019-10-23 10:27:18.804  INFO 15624 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2019-10-23 10:27:18.808  INFO 15624 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-10-23 10:27:18.809  INFO 15624 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-10-23 10:27:18.809  INFO 15624 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2019-10-23 10:27:18.809  INFO 15624 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2019-10-23 10:27:19.114  INFO 15624 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@50313382: startup date [Wed Oct 23 10:27:17 CST 2019]; root of context hierarchy
+2019-10-23 10:27:19.184  INFO 15624 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/meal/mealOrder],methods=[POST || GET],produces=[application/json;charset=utf-8]}" onto public java.lang.String com.hnjca.wechat.controller.DingcController.mealOrder(java.lang.String)
+2019-10-23 10:27:19.185  INFO 15624 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/meal/selectmeald],methods=[POST || GET],produces=[application/json;charset=utf-8]}" onto public java.lang.String com.hnjca.wechat.controller.DingcController.selectmealOrderTongji(java.lang.String)
+2019-10-23 10:27:19.186  INFO 15624 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/meal/tuiOrder],methods=[POST || GET],produces=[application/json;charset=utf-8]}" onto public java.lang.String com.hnjca.wechat.controller.DingcController.tuiOrder(java.lang.String)
+2019-10-23 10:27:19.186  INFO 15624 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/meal/selectmealOrder],methods=[POST || GET],produces=[application/json;charset=utf-8]}" onto public java.lang.String com.hnjca.wechat.controller.DingcController.selectmealOrder(java.lang.String)
+2019-10-23 10:27:19.186  INFO 15624 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/meal/selectUserInfo],methods=[POST || GET],produces=[application/json;charset=utf-8]}" onto public java.lang.String com.hnjca.wechat.controller.DingcController.selectUserInfo(java.lang.String)
+2019-10-23 10:27:19.187  INFO 15624 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/meal/selectMenuInfo],methods=[POST || GET],produces=[application/json;charset=utf-8]}" onto public java.lang.String com.hnjca.wechat.controller.DingcController.selectMenuInfo(java.lang.String)
+2019-10-23 10:27:19.187  INFO 15624 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/meal/selectmealInfo],methods=[POST || GET],produces=[application/json;charset=utf-8]}" onto public java.util.Map<java.lang.String, java.lang.String> com.hnjca.wechat.controller.DingcController.selectmealInfo(java.lang.String)
+2019-10-23 10:27:19.187  INFO 15624 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/meal/selectmealTongji],methods=[POST || GET],produces=[application/json;charset=utf-8]}" onto public java.lang.String com.hnjca.wechat.controller.DingcController.selectmealTongji(java.lang.String)
+2019-10-23 10:27:19.190  INFO 15624 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/hnjca/index],methods=[GET],produces=[application/json;charset=utf-8]}" onto public void com.hnjca.wechat.controller.HnjcaController.get(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.io.UnsupportedEncodingException
+2019-10-23 10:27:19.190  INFO 15624 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/hnjca/auth],methods=[GET],produces=[application/json;charset=utf-8]}" onto public void com.hnjca.wechat.controller.HnjcaController.auth(java.lang.String,java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.io.IOException
+2019-10-23 10:27:19.190  INFO 15624 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/hnjca/index],methods=[POST],produces=[application/json;charset=utf-8]}" onto public void com.hnjca.wechat.controller.HnjcaController.post(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.io.IOException,org.dom4j.DocumentException
+2019-10-23 10:27:19.191  INFO 15624 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/msgTuiC],methods=[GET],produces=[application/json;charset=utf-8]}" onto public com.hnjca.wechat.vo.ResponseInfo com.hnjca.wechat.controller.PushTemplateMsgController.pushMsgTuiC(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)
+2019-10-23 10:27:19.192  INFO 15624 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/wx/validateBind],methods=[POST || GET],produces=[application/json;charset=utf-8]}" onto public java.lang.String com.hnjca.wechat.controller.WeixinController.validateBind(java.lang.String)
+2019-10-23 10:27:19.192  INFO 15624 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/wx/banding],methods=[POST || GET],produces=[application/json;charset=utf-8]}" onto public java.lang.String com.hnjca.wechat.controller.WeixinController.binding(java.lang.String,java.lang.String,java.lang.String)
+2019-10-23 10:27:19.194  INFO 15624 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-10-23 10:27:19.194  INFO 15624 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-10-23 10:27:19.232  INFO 15624 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-10-23 10:27:19.233  INFO 15624 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-10-23 10:27:19.272  INFO 15624 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-10-23 10:27:19.300  INFO 15624 --- [main] oConfiguration$WelcomePageHandlerMapping : Adding welcome page: ServletContext resource [/index.html]
+2019-10-23 10:27:19.551  INFO 15624 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2019-10-23 10:27:19.611  INFO 15624 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2019-10-23 10:27:19.615  INFO 15624 --- [main] com.hnjca.wechat.DingCApplication        : Started DingCApplication in 3.078 seconds (JVM running for 3.597)
+2019-10-23 10:27:25.619  INFO 15624 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2019-10-23 10:27:25.619  INFO 15624 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2019-10-23 10:27:25.637  INFO 15624 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 18 ms
+2019-10-23 10:28:19.799  INFO 15624 --- [Thread-3] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@50313382: startup date [Wed Oct 23 10:27:17 CST 2019]; root of context hierarchy
+2019-10-23 10:28:19.806  INFO 15624 --- [Thread-3] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2019-10-23 10:28:23.512  INFO 15324 --- [main] com.hnjca.wechat.DingCApplication        : Starting DingCApplication on admin-PC with PID 15324 (F:\Ellison\wx-dingc\target\classes started by admin in F:\Ellison\wx-dingc)
+2019-10-23 10:28:23.520  INFO 15324 --- [main] com.hnjca.wechat.DingCApplication        : No active profile set, falling back to default profiles: default
+2019-10-23 10:28:23.638  INFO 15324 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@50313382: startup date [Wed Oct 23 10:28:23 CST 2019]; root of context hierarchy
+2019-10-23 10:28:25.391  INFO 15324 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2019-10-23 10:28:25.405  INFO 15324 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-10-23 10:28:25.406  INFO 15324 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.23
+2019-10-23 10:28:25.510  INFO 15324 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring embedded WebApplicationContext
+2019-10-23 10:28:25.511  INFO 15324 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1875 ms
+2019-10-23 10:28:25.628  INFO 15324 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2019-10-23 10:28:25.632  INFO 15324 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-10-23 10:28:25.632  INFO 15324 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-10-23 10:28:25.633  INFO 15324 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2019-10-23 10:28:25.633  INFO 15324 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2019-10-23 10:28:25.923  INFO 15324 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@50313382: startup date [Wed Oct 23 10:28:23 CST 2019]; root of context hierarchy
+2019-10-23 10:28:25.995  INFO 15324 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/meal/selectmeald],methods=[POST || GET],produces=[application/json;charset=utf-8]}" onto public java.lang.String com.hnjca.wechat.controller.DingcController.selectmealOrderTongji(java.lang.String)
+2019-10-23 10:28:25.997  INFO 15324 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/meal/mealOrder],methods=[POST || GET],produces=[application/json;charset=utf-8]}" onto public java.lang.String com.hnjca.wechat.controller.DingcController.mealOrder(java.lang.String)
+2019-10-23 10:28:25.997  INFO 15324 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/meal/tuiOrder],methods=[POST || GET],produces=[application/json;charset=utf-8]}" onto public java.lang.String com.hnjca.wechat.controller.DingcController.tuiOrder(java.lang.String)
+2019-10-23 10:28:25.997  INFO 15324 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/meal/selectmealOrder],methods=[POST || GET],produces=[application/json;charset=utf-8]}" onto public java.lang.String com.hnjca.wechat.controller.DingcController.selectmealOrder(java.lang.String)
+2019-10-23 10:28:25.998  INFO 15324 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/meal/selectUserInfo],methods=[POST || GET],produces=[application/json;charset=utf-8]}" onto public java.lang.String com.hnjca.wechat.controller.DingcController.selectUserInfo(java.lang.String)
+2019-10-23 10:28:25.998  INFO 15324 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/meal/selectMenuInfo],methods=[POST || GET],produces=[application/json;charset=utf-8]}" onto public java.lang.String com.hnjca.wechat.controller.DingcController.selectMenuInfo(java.lang.String)
+2019-10-23 10:28:25.998  INFO 15324 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/meal/selectmealInfo],methods=[POST || GET],produces=[application/json;charset=utf-8]}" onto public java.util.Map<java.lang.String, java.lang.String> com.hnjca.wechat.controller.DingcController.selectmealInfo(java.lang.String)
+2019-10-23 10:28:25.998  INFO 15324 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/meal/selectmealTongji],methods=[POST || GET],produces=[application/json;charset=utf-8]}" onto public java.lang.String com.hnjca.wechat.controller.DingcController.selectmealTongji(java.lang.String)
+2019-10-23 10:28:26.001  INFO 15324 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/hnjca/index],methods=[GET],produces=[application/json;charset=utf-8]}" onto public void com.hnjca.wechat.controller.HnjcaController.get(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.io.UnsupportedEncodingException
+2019-10-23 10:28:26.002  INFO 15324 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/hnjca/index],methods=[POST],produces=[application/json;charset=utf-8]}" onto public void com.hnjca.wechat.controller.HnjcaController.post(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.io.IOException,org.dom4j.DocumentException
+2019-10-23 10:28:26.002  INFO 15324 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/hnjca/auth],methods=[GET],produces=[application/json;charset=utf-8]}" onto public void com.hnjca.wechat.controller.HnjcaController.auth(java.lang.String,java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.io.IOException
+2019-10-23 10:28:26.003  INFO 15324 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/msgTuiC],methods=[GET],produces=[application/json;charset=utf-8]}" onto public com.hnjca.wechat.vo.ResponseInfo com.hnjca.wechat.controller.PushTemplateMsgController.pushMsgTuiC(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)
+2019-10-23 10:28:26.004  INFO 15324 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/wx/validateBind],methods=[POST || GET],produces=[application/json;charset=utf-8]}" onto public java.lang.String com.hnjca.wechat.controller.WeixinController.validateBind(java.lang.String)
+2019-10-23 10:28:26.004  INFO 15324 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/wx/banding],methods=[POST || GET],produces=[application/json;charset=utf-8]}" onto public java.lang.String com.hnjca.wechat.controller.WeixinController.binding(java.lang.String,java.lang.String,java.lang.String)
+2019-10-23 10:28:26.005  INFO 15324 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-10-23 10:28:26.006  INFO 15324 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-10-23 10:28:26.037  INFO 15324 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-10-23 10:28:26.038  INFO 15324 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-10-23 10:28:26.080  INFO 15324 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-10-23 10:28:26.116  INFO 15324 --- [main] oConfiguration$WelcomePageHandlerMapping : Adding welcome page: ServletContext resource [/index.html]
+2019-10-23 10:28:26.325  INFO 15324 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2019-10-23 10:28:26.377  INFO 15324 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2019-10-23 10:28:26.381  INFO 15324 --- [main] com.hnjca.wechat.DingCApplication        : Started DingCApplication in 3.298 seconds (JVM running for 3.814)
+2019-10-23 10:28:31.103  INFO 15324 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2019-10-23 10:28:31.103  INFO 15324 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2019-10-23 10:28:31.116  INFO 15324 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 13 ms
+2019-10-23 10:28:53.052  INFO 15324 --- [Thread-3] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@50313382: startup date [Wed Oct 23 10:28:23 CST 2019]; root of context hierarchy
+2019-10-23 10:28:53.054  INFO 15324 --- [Thread-3] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2019-10-23 10:34:51.552  INFO 12316 --- [main] com.hnjca.wechat.DingCApplication        : Starting DingCApplication on admin-PC with PID 12316 (F:\Ellison\wx-dingc\target\classes started by admin in F:\Ellison\wx-dingc)
+2019-10-23 10:34:51.554  INFO 12316 --- [main] com.hnjca.wechat.DingCApplication        : No active profile set, falling back to default profiles: default
+2019-10-23 10:34:51.685  INFO 12316 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@50313382: startup date [Wed Oct 23 10:34:51 CST 2019]; root of context hierarchy
+2019-10-23 10:34:53.226  INFO 12316 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2019-10-23 10:34:53.237  INFO 12316 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-10-23 10:34:53.238  INFO 12316 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.23
+2019-10-23 10:34:53.338  INFO 12316 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring embedded WebApplicationContext
+2019-10-23 10:34:53.338  INFO 12316 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1659 ms
+2019-10-23 10:34:53.466  INFO 12316 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2019-10-23 10:34:53.471  INFO 12316 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-10-23 10:34:53.472  INFO 12316 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-10-23 10:34:53.472  INFO 12316 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2019-10-23 10:34:53.472  INFO 12316 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2019-10-23 10:34:53.792  INFO 12316 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@50313382: startup date [Wed Oct 23 10:34:51 CST 2019]; root of context hierarchy
+2019-10-23 10:34:53.867  INFO 12316 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/meal/selectmeald],methods=[POST || GET],produces=[application/json;charset=utf-8]}" onto public java.lang.String com.hnjca.wechat.controller.DingcController.selectmealOrderTongji(java.lang.String)
+2019-10-23 10:34:53.868  INFO 12316 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/meal/mealOrder],methods=[POST || GET],produces=[application/json;charset=utf-8]}" onto public java.lang.String com.hnjca.wechat.controller.DingcController.mealOrder(java.lang.String)
+2019-10-23 10:34:53.869  INFO 12316 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/meal/tuiOrder],methods=[POST || GET],produces=[application/json;charset=utf-8]}" onto public java.lang.String com.hnjca.wechat.controller.DingcController.tuiOrder(java.lang.String)
+2019-10-23 10:34:53.869  INFO 12316 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/meal/selectmealOrder],methods=[POST || GET],produces=[application/json;charset=utf-8]}" onto public java.lang.String com.hnjca.wechat.controller.DingcController.selectmealOrder(java.lang.String)
+2019-10-23 10:34:53.869  INFO 12316 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/meal/selectUserInfo],methods=[POST || GET],produces=[application/json;charset=utf-8]}" onto public java.lang.String com.hnjca.wechat.controller.DingcController.selectUserInfo(java.lang.String)
+2019-10-23 10:34:53.869  INFO 12316 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/meal/selectMenuInfo],methods=[POST || GET],produces=[application/json;charset=utf-8]}" onto public java.lang.String com.hnjca.wechat.controller.DingcController.selectMenuInfo(java.lang.String)
+2019-10-23 10:34:53.869  INFO 12316 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/meal/selectmealInfo],methods=[POST || GET],produces=[application/json;charset=utf-8]}" onto public java.util.Map<java.lang.String, java.lang.String> com.hnjca.wechat.controller.DingcController.selectmealInfo(java.lang.String)
+2019-10-23 10:34:53.870  INFO 12316 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/meal/selectmealTongji],methods=[POST || GET],produces=[application/json;charset=utf-8]}" onto public java.lang.String com.hnjca.wechat.controller.DingcController.selectmealTongji(java.lang.String)
+2019-10-23 10:34:53.872  INFO 12316 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/hnjca/index],methods=[GET],produces=[application/json;charset=utf-8]}" onto public void com.hnjca.wechat.controller.HnjcaController.get(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.io.UnsupportedEncodingException
+2019-10-23 10:34:53.872  INFO 12316 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/hnjca/index],methods=[POST],produces=[application/json;charset=utf-8]}" onto public void com.hnjca.wechat.controller.HnjcaController.post(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.io.IOException,org.dom4j.DocumentException
+2019-10-23 10:34:53.872  INFO 12316 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/hnjca/auth],methods=[GET],produces=[application/json;charset=utf-8]}" onto public void com.hnjca.wechat.controller.HnjcaController.auth(java.lang.String,java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.io.IOException
+2019-10-23 10:34:53.873  INFO 12316 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/msgTuiC],methods=[GET],produces=[application/json;charset=utf-8]}" onto public com.hnjca.wechat.vo.ResponseInfo com.hnjca.wechat.controller.PushTemplateMsgController.pushMsgTuiC(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)
+2019-10-23 10:34:53.875  INFO 12316 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/wx/validateBind],methods=[POST || GET],produces=[application/json;charset=utf-8]}" onto public java.lang.String com.hnjca.wechat.controller.WeixinController.validateBind(java.lang.String)
+2019-10-23 10:34:53.875  INFO 12316 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/wx/banding],methods=[POST || GET],produces=[application/json;charset=utf-8]}" onto public java.lang.String com.hnjca.wechat.controller.WeixinController.binding(java.lang.String,java.lang.String,java.lang.String)
+2019-10-23 10:34:53.877  INFO 12316 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-10-23 10:34:53.877  INFO 12316 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-10-23 10:34:53.906  INFO 12316 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-10-23 10:34:53.906  INFO 12316 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-10-23 10:34:53.943  INFO 12316 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-10-23 10:34:53.965  INFO 12316 --- [main] oConfiguration$WelcomePageHandlerMapping : Adding welcome page: ServletContext resource [/index.html]
+2019-10-23 10:34:54.194  INFO 12316 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2019-10-23 10:34:54.247  INFO 12316 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2019-10-23 10:34:54.251  INFO 12316 --- [main] com.hnjca.wechat.DingCApplication        : Started DingCApplication in 3.096 seconds (JVM running for 3.66)
+2019-10-23 10:34:57.844  INFO 12316 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2019-10-23 10:34:57.844  INFO 12316 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2019-10-23 10:34:57.869  INFO 12316 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 25 ms

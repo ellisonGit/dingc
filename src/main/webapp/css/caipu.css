@@ -1,0 +1,31 @@
+.signWrap {
+    display: none;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+
+    height: 100%;
+    background: rgba(0,0,0,0.2);
+}
+.sign {
+    position: absolute;
+    left: 1%;
+    top: 10%;
+    background: #fff;
+}
+label{
+    width: 100%;
+   text-align: center;
+}
+
+.labelcan{
+    width: 20%;
+}
+
+body{
+    /*   background: url("http://lllison.viphk.ngrok.org/api/img/beij.png");*/
+    background: url("http://food.gdeastriver.com/api/img/beij.png");
+}

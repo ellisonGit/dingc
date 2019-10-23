@@ -1,0 +1,61 @@
+.tou{
+  text-align: center;
+  border-collapse: collapse;
+  font-size: 15px;
+  background-color: #DDDDDD;
+  font-weight:600 ;
+  border:none;
+  font-family: '微软雅黑', '宋体', sans-serif;
+}
+.one{
+  padding-bottom: 15px;
+  padding-top: -6rem;
+}
+
+.inputc {
+  width: 5.3rem;
+  margin-left: 1rem;
+  text-align: center;
+}
+
+.inputtwo {
+  width: 5.3rem;
+  text-align: center;
+  /*	visibility: hidden;*/
+}
+
+td {
+  border: 0px solid rgba(116, 107, 128, 0.45);
+  text-align: center;
+  border-collapse: collapse;
+  font-size: 14px;
+  height: 20px;
+  width: 25%;
+}
+th{
+  width: 25%;
+
+}
+
+.tab {
+
+  overflow: scroll;
+  height: 500px;
+  width: 100%;
+
+}
+
+.tabb {
+  border: 1px solid rgba(116, 107, 128, 0.45);
+  border-left:none;border-right:none;border-top: none;
+  width: 100%;
+  height: 10%;
+
+}
+
+body{
+  /*   background: url("http://lllison.viphk.ngrok.org/api/img/beij.png");*/
+  background: url("http://food.gdeastriver.com/api/img/beij.png");
+}
+
+

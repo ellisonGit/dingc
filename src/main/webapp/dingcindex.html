@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<head>
+    <title>订餐服务</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+
+    <!-- head 中 -->
+    <link rel="stylesheet" href="css/index.css?id=003">
+    <script type="text/javascript" src="wx/js/jquery-1.8.2.min.js"></script>
+    <script src="js/common.js?id=005"></script>
+    <script type="text/javascript" src="js/Calendar.js?id=005"></script>
+    <script type="text/javascript" src="js/index.js?id=005"></script>
+
+
+</head>
+<body>
+    <h3>欢迎使用订餐系统</h3>
+    <hr/>
+    <div class="user info">
+        <div class="userPhoto">
+            <img src="img/user2.png" alt="">
+        </div>
+        <div class="info">
+            <span class="spanone" >编号：<span id="empcode" ></span></span>
+            <span class="spanone" >姓名：<span id="empname" ></span></span>
+        </div>
+        <div class="my_yue">余额：<span id="numBox">0.00</span>元</div>
+       <!-- <div class="details">
+            <a href="tuidingc.html">退餐>></a>
+        </div>-->
+        <hr/>
+    </div>
+    <div class="btns">
+        <div id="daymeal" class="botton">天订餐</div>
+        <input class="dayinput" id="dayriqi" type="text" onclick="fPopCalendar(event,this,this)" readonly="readonly" value="" disabled>
+        <label class="lab" id="labid">当天订第二天</label>
+        <div id="weekmeal" class="botton2" >周订餐</div>
+     <!--   <div id="monthmeal" class="botton">月订餐</div>-->
+        <div class="one">
+            <input class="inputc" id="riqi" type="text" onclick="fPopCalendar(event,this,this)" readonly="readonly"
+                   value="" disabled>
+            <span id="z" class="zhi">至</span>
+            <input class="inputtwo" id="riqitwo" type="text" onclick="fPopCalendar(event,this,this)" readonly="readonly"
+                   value="">
+        </div>
+    </div>
+
+    <div class="dateriqi">
+
+     <!--   <label class="lab">注：周六日订餐</label>-->
+        <label class="bulue"><img src="img/hui.png" width="20px" height="10px">未订餐</label>
+        <label class="bulue"><img src="img/lan.png" width="20px" height="10px">已订餐</label>
+        <label class="bulue"><img src="img/lv.png" width="20px" height="10px">选订餐</label>
+
+
+    </div>
+
+    <div class="tab">
+        <table id="tableFor" class="tabb"  border="0" cellpadding="0" cellspacing="0">
+        </table>
+    </div>
+    <div class="btninput" onclick="jqchk()" >确&nbsp;&nbsp;认&nbsp;&nbsp;订&nbsp;&nbsp;餐</div>
+
+
+</form>
+
+</body>
+<!-- body 最后 -->
+
+<script src="js/txt.wav.min.js"></script>
+
+</html>
