@@ -19,13 +19,34 @@
 label{
     width: 100%;
    text-align: center;
+    margin-left: 0.3rem;
+    text-align: end;
 }
 
 .labelcan{
     width: 20%;
+    margin-left: 0.8rem;
 }
 
 body{
     /*   background: url("http://lllison.viphk.ngrok.org/api/img/beij.png");*/
-    background: url("http://food.gdeastriver.com/api/img/beij.png");
+ /*   background: url("../img/beij.png");*/
+}
+
+span{
+
+    margin-left: 4.5rem;
+}
+
+#imageId{
+    width: 99%;
+}
+#c0,#c1,#c2,#c3,#c4,#c5,#c6,#c7{
+    margin: 0 auto;
+    width: 100%;
+    height: 60px;
+    text-align: left;
+    line-height: 60px;
+    border: 0.5px solid #ddd;
+    overflow: scroll;
 }

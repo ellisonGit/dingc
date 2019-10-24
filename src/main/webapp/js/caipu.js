@@ -34,10 +34,10 @@ function findCaipu(openid) { //查询菜谱
             for(var i=0;i < list;i++) {//循环星期几日期
                 var data1 = result[i];
                val= data1.WEEK;
-
+             var shijian=   updateDate(data1.DATE);
                 $("#tableFor").append(
                     "   <li class=\"mui-table-view-cell mui-collapse\">" +
-                    " <a class=\"mui-navigate-right\" href=\"#\">"+data1.WEEK+" &nbsp;&nbsp;&nbsp;<span>"+data1.DATE+"</span></a>" +
+                    " <a class=\"mui-navigate-right\" href=\"#\">"+data1.WEEK+" &nbsp;&nbsp;&nbsp;<span>"+shijian+"</span></a>" +
                     " <div class=\"mui-collapse-content\">" +
                     "  <form id='"+"f"+ i +"' class=\"mui-input-group\">" );
                 var Meals=data1.MEALS.length;
@@ -77,4 +77,10 @@ function findCaipu(openid) { //查询菜谱
 function tu(obj){
     $("#imageId").attr("src",obj);
 
+}
+
+//将日期yyyymmdd改为yyyy-mm-dd
+function  updateDate(d) {
+    var dd= d.replace(/^(\d{4})(\d{2})(\d{2})$/, "$1-$2-$3");
+    return dd;
 }

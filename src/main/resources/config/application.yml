@@ -4,7 +4,7 @@ server:
   #打印SQL
 logging:
   level:
-    api: debug
+    com.hnjca.wechat: debug
     #保存日志
-  file: ./logs/core.log
+  file: ./logs/core2.log
   root: INFO

@@ -2295,7 +2295,7 @@ select:focus {
 }
 
 .mui-input-group .mui-input-row {
-    height: 40px
+    height: 60px
 
 }
 
@@ -2312,10 +2312,9 @@ select:focus {
 }
 
 .mui-input-row label {
-
+margin-top: 3rem;
     width: 35%;
-    padding: 8px 10px;
-    padding-top: 1rem;
+    /*padding: 8px 10px;*/
     font-family: "Helvetica Neue", Helvetica, sans-serif;
     line-height: 1.1
 }
@@ -3876,7 +3875,7 @@ body > .mui-progressbar {
     font-family: Muiicons;
     font-style: normal;
     font-weight: 400;
-    src: url(../fonts/mui.ttf) format("truetype")
+   /* src: url(../fonts/mui.ttf) format("truetype")*/
 }
 
 .mui-icon {
