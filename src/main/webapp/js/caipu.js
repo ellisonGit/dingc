@@ -5,6 +5,7 @@ $(function () {
     if(openid==""){
         window.location.href=icardUrl+"/hnjca/auth?returnUrl="+icardUrl+"/banding.html";
     }
+    finUserInfo(openid);
     findCaipu(openid);
 
 });
@@ -83,4 +84,25 @@ function tu(obj){
 function  updateDate(d) {
     var dd= d.replace(/^(\d{4})(\d{2})(\d{2})$/, "$1-$2-$3");
     return dd;
+}
+
+//查询个人信息
+function finUserInfo(openid) {
+
+    $.ajax({
+        type: "post",
+        url: "/api/meal/selectUserInfo",
+        data: openid,
+        dataType: "json",
+        contentType: "application/json",
+        async: false,
+        success: function (data) {
+            if(data.rcode=="没有查询到人员信息"){
+                window.location.href=icardUrl+"/hnjca/auth?returnUrl="+icardUrl+"/banding.html";
+            }
+
+
+        }
+
+    });
 }

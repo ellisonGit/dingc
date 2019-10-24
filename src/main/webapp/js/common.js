@@ -1,5 +1,5 @@
-//var icardUrl = "http://lllison.viphk.ngrok.org/api";
-var icardUrl = "http://food.gdeastriver.com/api";
+var icardUrl = "http://lllison.viphk.ngrok.org/api";
+//var icardUrl = "http://food.gdeastriver.com/api";
 //获取cookie
 function getCookie(name){
 	var strcookie = document.cookie;//获取cookie字符串

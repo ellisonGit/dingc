@@ -21,6 +21,7 @@ $(function () {
     if(openid==""){
         window.location.href=icardUrl+"/hnjca/auth?returnUrl="+icardUrl+"/banding.html";
     }
+    finUserInfo(openid);
     findTongji(openid);
     //获取今天日期yymmdd
     function getNowFormatDate() {
@@ -124,5 +125,26 @@ function findTongji(openid) { //查询订餐及用餐统计
 
 
         }
+    });
+}
+
+//查询个人信息
+function finUserInfo(openid) {
+
+    $.ajax({
+        type: "post",
+        url: "/api/meal/selectUserInfo",
+        data: openid,
+        dataType: "json",
+        contentType: "application/json",
+        async: false,
+        success: function (data) {
+            if(data.rcode=="没有查询到人员信息"){
+                window.location.href=icardUrl+"/hnjca/auth?returnUrl="+icardUrl+"/banding.html";
+            }
+
+
+        }
+
     });
 }

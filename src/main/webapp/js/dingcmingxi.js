@@ -26,6 +26,7 @@ $(function () {
     if(openid==""){
         window.location.href=icardUrl+"/hnjca/auth?returnUrl="+icardUrl+"/banding.html";
     }
+    finUserInfo(openid);
     findInfo(openid);
     //获取今天日期yymmdd
     function getNowFormatDate() {
@@ -223,4 +224,25 @@ function quk(st) {
     var nstr =(st.toString().replace(/\(|/g,''));
     var nstr2 =(nstr.replace(/\)|/g,''));
 return nstr2;
+}
+
+//查询个人信息
+function finUserInfo(openid) {
+
+    $.ajax({
+        type: "post",
+        url: "/api/meal/selectUserInfo",
+        data: openid,
+        dataType: "json",
+        contentType: "application/json",
+        async: false,
+        success: function (data) {
+            if(data.rcode=="没有查询到人员信息"){
+                window.location.href=icardUrl+"/hnjca/auth?returnUrl="+icardUrl+"/banding.html";
+            }
+
+
+        }
+
+    });
 }

@@ -1,4 +1,4 @@
-var icardUrl = "http://food.gdeastriver.com/api";
+//var icardUrl = "http://food.gdeastriver.com/api";
 var currentDateEnd;
 var monthDate;
 var currentDateStart;
@@ -334,6 +334,9 @@ function finUserInfo(openid) {
         contentType: "application/json",
         async: false,
         success: function (data) {
+            if(data.rcode=="没有查询到人员信息"){
+                window.location.href=icardUrl+"/hnjca/auth?returnUrl="+icardUrl+"/banding.html";
+            }
             document.getElementById("empcode").innerText = data.empcode;
             document.getElementById("empname").innerText = data.empname;
             $(".my_yue span").html(data.balance);//余额
