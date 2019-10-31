@@ -111,6 +111,20 @@ function findTongji(openid) { //查询订餐及用餐统计
         contentType: "application/json",
         async: true,
         success: function (data) {
+            if(data.ALL_ZERO=="yes"|| "yes".equals(data.ALL_ZERO)){
+                //订餐
+                document.getElementById("dzao").innerText = "0";
+                document.getElementById("dzhong").innerText = "0";
+                document.getElementById("dwan").innerText ="0";
+                document.getElementById("dye").innerText = "0";
+
+                //用餐
+                document.getElementById("yzao").innerText = "0";
+                document.getElementById("yzhong").innerText ="0";
+                document.getElementById("ywan").innerText = "0";
+                document.getElementById("yye").innerText = "0";
+                return;
+            }
            //订餐
             document.getElementById("dzao").innerText = data.BREAKFAST;
             document.getElementById("dzhong").innerText = data.LUNCH;
