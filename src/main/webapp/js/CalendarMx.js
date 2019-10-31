@@ -73,10 +73,7 @@ function fSetDate(iYear,iMonth,iDay){
     var e=riqitwo.value;//结束时间
     var subD=getDateByTimeStr(s);//字符转日期类型
     var subE=getDateByTimeStr(e);//字符转日期类型
-    if(subD>new Date(currentDateStart.replace(/-/g, '/'))){
-        alert("选择不能大于当前日期哦！");
-        return;
-    }if(subE>new Date(currentDateStart.replace(/-/g, '/'))){
+    if(subE>new Date(currentDateStart.replace(/-/g, '/'))){
         alert("选择不能大于当前日期哦！");
         return;
     }
