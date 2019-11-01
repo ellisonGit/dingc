@@ -25,24 +25,24 @@ function getOpenIdFromCookie(){
 		return cookieStr.openid;
 	}else{
 		return "";
-	}	
+	}
 }
 
 //初始化方法
 function init(){
 	if(openid== null || openid == ""){
 		//window.location.href="https://open.weixin.qq.com/connect/oauth2/authorize?appid=wxe91c161506160ef7&redirect_uri=http://pay.modernjj.com/ecard_weixin/binding&response_type=code&scope=snsapi_userinfo&state=1#wechat_redirect";
-		window.location.href=icardUrl+"/hnjca/auth?returnUrl="+icardUrl+"/banding.html";
+		window.location.href=icardUrl+"/hnjca/auth?returnUrl=http://pay.modernjj.com/ecard_weixin/binding&response_type=code&scope=snsapi_userinfo&state=1#wechat_redirect";
 	}
 }
 
 //获取url后面参数的值
-function getQueryString(name) { 
+function getQueryString(name) {
 	var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)"); //构造一个含有目标参数的正则表达式对象 
 	var r = window.location.search.substr(1).match(reg); //匹配目标参数 
-	if (r != null) return decodeURIComponent(r[2]); 
+	if (r != null) return decodeURIComponent(r[2]);
 	return null; //返回参数值 
-} 
+}
 
 //优化日期显示
 function youhuaDateStr(dateStr){
@@ -56,14 +56,14 @@ function youhuaDateStr(dateStr){
 	if(day < 10){
 		day = "0"+day;
 	}
-	
+
 	var todayStr = year + month+day;
-	
+
 	if(todayStr == dateStr){
 		return "今天";
 	}else{
 		return dateStr.substr(4,2)+"-"+dateStr.substr(6,2);
-	}	
+	}
 }
 
 //将时间戳转日期格式
@@ -95,7 +95,7 @@ function youhuaTimeStr(timeStr){
 }
 
 //获取当天的月份格式 yyyyMM
-function getNowMonth(){		
+function getNowMonth(){
 	var myDate = new Date();
 	var year = myDate.getFullYear()+"";
 	var month = myDate.getMonth()+1+"";
@@ -142,7 +142,7 @@ function youhuaMoney(moneyStr){
 	var idx = moneyStr.indexOf(".");
 	if(idx == -1){
 		return moneyStr+".00";
-	} 
+	}
 	var str = moneyStr.substr(idx);
 	if(str.length == 2){
 		return moneyStr+"0";
