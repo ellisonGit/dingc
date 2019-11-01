@@ -71,8 +71,13 @@ public class DingcController {
         JsonObject jo = jp.parse(result).getAsJsonObject();
         //获取message对应的值
         String rcode = jo.get("rcode").getAsString();//获取返回代码是否成功1：成功。0：失败
-        if(rcode.equals("1")){
-            String info= WXAuthServiceImpl. pushMsgDingC(openid);//消息发送
+
+        if("0".equals(rcode)){
+            String requestTimest = jo.get("responseTimestamp").getAsString();//获取返回 时间
+            String empname = jo.get("empname").getAsString();//获取返回 用户名
+            String reg = "(\\d{4})(\\d{2})(\\d{2})(\\d{2})(\\d{2})(\\d{2})";
+            String  requestTime = requestTimest.replaceAll(reg, "$1-$2-$3 $4:$5:$6");
+            String info= WXAuthServiceImpl. pushMsgDingC(openid,empname,requestTime);//消息发送
             if(info=="SUCCESS"){
                 System.out.println("msg结果："+result);
                 return result;
