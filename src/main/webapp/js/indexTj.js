@@ -19,7 +19,7 @@ $(function () {
     $("#datetime").val(riqi.value);
     openid = getOpenIdFromCookie();//获取openid
     if(openid==""){
-        window.location.href=icardUrl+"/hnjca/auth?returnUrl="+icardUrl+"/banding.html";
+        init();
     }
     finUserInfo(openid);
     findTongji(openid);
@@ -111,7 +111,7 @@ function findTongji(openid) { //查询订餐及用餐统计
         contentType: "application/json",
         async: true,
         success: function (data) {
-            if(data.ALL_ZERO=="yes"|| "yes".equals(data.ALL_ZERO)){
+            if(data.ALL_ZERO=="yes"){
                 //订餐
                 document.getElementById("dzao").innerText = "0";
                 document.getElementById("dzhong").innerText = "0";
@@ -154,7 +154,8 @@ function finUserInfo(openid) {
         async: false,
         success: function (data) {
             if(data.rcode=="没有查询到人员信息"){
-                window.location.href=icardUrl+"/hnjca/auth?returnUrl="+icardUrl+"/banding.html";
+                window.location.href="https://open.weixin.qq.com/connect/oauth2/authorize?appid=wxe91c161506160ef7&redirect_uri=http://pay.modernjj.com/ecard_weixin/binding&response_type=code&scope=snsapi_userinfo&state=1#wechat_redirect";
+
             }
 
 

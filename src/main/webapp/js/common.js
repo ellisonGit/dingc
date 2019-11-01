@@ -1,4 +1,5 @@
-var icardUrl = "http://lllison.viphk.ngrok.org/api";
+var icardUrl = "http://pay.modernjj.com/api";
+//var icardUrl = "http://lllison.viphk.ngrok.org/api";
 //var icardUrl = "http://food.gdeastriver.com/api";
 //获取cookie
 function getCookie(name){
@@ -29,7 +30,8 @@ function getOpenIdFromCookie(){
 
 //初始化方法
 function init(){
-	if(openId== null || openId == ""){
+	if(openid== null || openid == ""){
+		//window.location.href="https://open.weixin.qq.com/connect/oauth2/authorize?appid=wxe91c161506160ef7&redirect_uri=http://pay.modernjj.com/ecard_weixin/binding&response_type=code&scope=snsapi_userinfo&state=1#wechat_redirect";
 		window.location.href=icardUrl+"/hnjca/auth?returnUrl="+icardUrl+"/banding.html";
 	}
 }

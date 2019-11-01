@@ -106,7 +106,7 @@ public class WXAuthServiceImpl implements WxAuthService {
           //openid="olvAC0_zpG7K03tJ4MjOmD8k0jD8";
         TemplateJson templateJson = new TemplateJson();
         templateJson.setTouser(openid);
-        templateJson.setTemplate_id("7_FGEv6LzJevcMO9aZ2SDydhAKC8NEATTB1bY4dLdB8");
+        templateJson.setTemplate_id("YckO2II7jl94Q5kR8WdT73c5ledriS2aHlxrm3WCJPQ");
         templateJson.setUrl(MyConfig.comUrl+"/dingcindex.html");
         templateJson.setDataFirstValue("亲爱的用户，您已成功订餐，请按时去用餐。");
         templateJson.setDataKeyWord1Value("");

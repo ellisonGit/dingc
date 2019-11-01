@@ -3,7 +3,8 @@ var openid;
 $(function () {
     openid = getOpenIdFromCookie();//获取openid
     if(openid==""){
-        window.location.href=icardUrl+"/hnjca/auth?returnUrl="+icardUrl+"/banding.html";
+        //window.location.href=icardUrl+"/hnjca/auth?returnUrl="+icardUrl+"/banding.html";
+        init();
     }
     finUserInfo(openid);
     findCaipu(openid);
@@ -98,7 +99,8 @@ function finUserInfo(openid) {
         async: false,
         success: function (data) {
             if(data.rcode=="没有查询到人员信息"){
-                window.location.href=icardUrl+"/hnjca/auth?returnUrl="+icardUrl+"/banding.html";
+                window.location.href="https://open.weixin.qq.com/connect/oauth2/authorize?appid=wxe91c161506160ef7&redirect_uri=http://pay.modernjj.com/ecard_weixin/binding&response_type=code&scope=snsapi_userinfo&state=1#wechat_redirect";
+
             }
 
 
