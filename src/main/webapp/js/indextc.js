@@ -259,6 +259,7 @@ function findWeek(openid) { //查询订餐信息
             if(res.length>0){
                 for(var i=0;i < res.length;i++) {
                     var data1 = res[i];
+                    alert(data1.IS_REFUND);
                     var thisTime = data1.DATE;
                     if(thisTime ==riqiTime){//判断当前日期是不是等于存在日期
                         if(data1.BOOKID!=null||data1.BOOKID>0){//是否已订餐

@@ -10,7 +10,9 @@ import org.apache.commons.httpclient.methods.PostMethod;
 import org.apache.commons.httpclient.params.HttpClientParams;
 import org.apache.commons.httpclient.params.HttpMethodParams;
 
+import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.io.PrintStream;
 
 public class WxServerUtil {
 
@@ -25,6 +27,7 @@ public class WxServerUtil {
 		HttpClient clientT = new HttpClient();
 		PostMethod post = new PostMethod(String.format(WXConfig.getAccessTokenUrl,appid,secret));
 		System.out.println("获取token地址：ellison"+String.format(WXConfig.getAccessTokenUrl,appid,secret));
+
 		HttpClientParams httparams = new HttpClientParams();
 		httparams.setSoTimeout(15000);
 		httparams.setParameter(HttpMethodParams.RETRY_HANDLER, new DefaultHttpMethodRetryHandler(0, false));

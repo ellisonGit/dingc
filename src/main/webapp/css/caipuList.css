@@ -54,9 +54,23 @@ span{
 .labelQcck{
     font-family: '微软雅黑', '宋体', sans-serif;
     font-size: 14px;
+    font-weight:bold;
 }
 
 .labelCanBie{
     font-family: '微软雅黑', '宋体', sans-serif;
     font-size: 17px;
+    font-weight:bold;
+}
+.labelQxiang{
+    font-family: '微软雅黑', '宋体', sans-serif;
+    font-size: 14px;
+    font-weight:bold;
+    color: #ce8323;
+}
+.labelyue{
+    font-family: '微软雅黑', '宋体', sans-serif;
+    font-size: 14px;
+    font-weight:bold;
+    color: #746b80;
 }

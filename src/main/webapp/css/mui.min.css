@@ -1977,7 +1977,7 @@ p {
 }
 
 .mui-table-view-cell.mui-collapse > .mui-navigate-right:after, .mui-table-view-cell.mui-collapse > .mui-push-right:after {
-    content: '\e581'
+    content: '\25BC'
 }
 
 .mui-table-view-cell.mui-collapse.mui-active {
@@ -1989,7 +1989,7 @@ p {
 }
 
 .mui-table-view-cell.mui-collapse.mui-active > .mui-navigate-right:after, .mui-table-view-cell.mui-collapse.mui-active > .mui-push-right:after {
-    content: '\e580'
+    content: '\25B2'
 }
 
 .mui-table-view-cell.mui-collapse.mui-active .mui-table-view-cell > a:not(.mui-btn).mui-active {
@@ -2295,7 +2295,7 @@ select:focus {
 }
 
 .mui-input-group .mui-input-row {
-    height: 60px
+    /*height: 60px*/
 
 }
 
@@ -3687,8 +3687,8 @@ body > .mui-progressbar {
 }
 
 .mui-navigate-right:after, .mui-push-right:after {
-    right: 15px;
-    content: '\e583'
+    right: 20px;
+    content: '\25BC'
 }
 
 .mui-pull-bottom-pocket, .mui-pull-top-pocket {

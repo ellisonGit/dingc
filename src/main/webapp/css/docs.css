@@ -986,7 +986,7 @@ ul.disc {
 
 hr {
     height: 0;
-    margin: 10px 0 30px;
+    margin: 10px 0 0px;
     clear: both;
     border: solid #ddd;
     border-width: 1px 0 0;

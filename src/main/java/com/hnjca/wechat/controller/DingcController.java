@@ -9,6 +9,8 @@ import com.hnjca.wechat.util.httpPostJson;
 import net.sf.json.JSONArray;
 import net.sf.json.JSONObject;
 import org.apache.commons.lang.StringEscapeUtils;
+
+import org.apache.log4j.Logger;
 import org.springframework.web.bind.annotation.*;
 
 import java.text.ParseException;
@@ -29,6 +31,7 @@ import static com.hnjca.wechat.util.Ascii.*;
 @RestController
 @RequestMapping(value = "/meal",produces = "application/json;charset=utf-8",method = RequestMethod.POST)
 public class DingcController {
+   // private static Logger logger = Logger.getLogger(DingcController.class);
     /**
      * 订餐
      * @param paraData
@@ -72,7 +75,7 @@ public class DingcController {
         //获取message对应的值
         String rcode = jo.get("rcode").getAsString();//获取返回代码是否成功1：成功。0：失败
 
-        if("0".equals(rcode)){
+        if("1".equals(rcode)){
             String requestTimest = jo.get("responseTimestamp").getAsString();//获取返回 时间
             String empname = jo.get("empname").getAsString();//获取返回 用户名
             String reg = "(\\d{4})(\\d{2})(\\d{2})(\\d{2})(\\d{2})(\\d{2})";
@@ -245,7 +248,7 @@ public class DingcController {
         Map<String, String> signMap = new LinkedHashMap<String, String>();//定义map接收处理的数据
         //String openid="o5hcr6K994hNS8U9z-ACua6y4q0c";//微信openid
         String appId=MyConfig.APPID;//微信appId
-       JSONObject jsonObject  = JSONObject.fromObject(paraData);
+        JSONObject jsonObject  = JSONObject.fromObject(paraData);
         String openid = jsonObject.get("openid").toString();
         Date d = new Date();
         SimpleDateFormat format = new SimpleDateFormat("yyyyMMdd");
@@ -273,6 +276,44 @@ public class DingcController {
     }
 
 
+
+
+    /**
+     * 查询： 每天每餐的菜单列表
+     * @param
+     * @throws
+     */
+    @GetMapping(value = "/selectMenuInfoList")
+    public String selectMenuInfoList( @RequestBody String paraData)  {
+        Map<String, String> signMap = new LinkedHashMap<String, String>();//定义map接收处理的数据
+        //String openid="o5hcr6K994hNS8U9z-ACua6y4q0c";//微信openid
+        String appId=MyConfig.APPID;//微信appId
+        JSONObject jsonObject  = JSONObject.fromObject(paraData);
+        String openid = jsonObject.get("openid").toString();
+        Date d = new Date();
+        SimpleDateFormat format = new SimpleDateFormat("yyyyMMdd");
+        String beginDate = format.format(d);
+        // System.out.println("开始时间："+beginDate);
+        String endDate = DateUtil.plusDay(7);
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMddHHmmss");
+        String requestTimestamp=sdf.format(new Date());//请求时间
+        System.out.println("请求时间："+requestTimestamp);
+        signMap.put("openid",openid);
+        signMap.put("appId",appId);
+        signMap.put("beginDate",beginDate);
+        signMap.put("endDate",endDate);
+        signMap.put("requestTimestamp",requestTimestamp);
+        String  asciiParam= putPairsSequenceAndTogether(signMap);//签名
+        System.out.println("sign"+asciiParam);//得到签名数据
+        signMap.put("sign",asciiParam);
+        System.out.println("JSON:"+signMap);
+        String  jsonString= JSON.toJSONString(signMap);
+        System.out.println("jsonString:"+jsonString);
+        String url = MyConfig.ICARD_URL +"/queryMenuList.action";
+        String result= httpPostJson.doPost(url,jsonString);
+        System.out.println("菜单结果："+result);
+        return result;
+    }
 
 
 
